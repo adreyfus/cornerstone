@@ -15,7 +15,7 @@ export default function (element) {
     return;
   }
 
-  return {
+  const result = {
     scale: viewport.scale,
     translation: {
       x: viewport.translation.x,
@@ -33,4 +33,14 @@ export default function (element) {
     modalityLUT: viewport.modalityLUT,
     voiLUT: viewport.voiLUT
   };
+
+  if (viewport.computeVoi !== undefined) {
+    result.computeVoi = {
+      forceAutoVoi: viewport.computeVoi.forceAutoVoi,
+      type: viewport.computeVoi.type,
+      voiPresetIndex: viewport.computeVoi.voiPresetIndex
+    };
+  }
+
+  return result;
 }
