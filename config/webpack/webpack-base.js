@@ -14,7 +14,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     library: '[name]',
-    libraryTarget: 'window',
+    libraryTarget: 'umd',
     path: outputPath,
     umdNamedDefine: true
   },
