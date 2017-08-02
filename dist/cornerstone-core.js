@@ -1,13 +1,13 @@
-/*! cornerstone-core - 0.12.2 - 2017-07-19 | (c) 2016 Chris Hafey | https://github.com/chafey/cornerstone */
+/*! cornerstone-core - 0.12.2 - 2017-08-02 | (c) 2016 Chris Hafey | https://github.com/chafey/cornerstone */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define("cornerstone", [], factory);
+		define("cornerstone-core", [], factory);
 	else if(typeof exports === 'object')
-		exports["cornerstone"] = factory();
+		exports["cornerstone-core"] = factory();
 	else
-		root["cornerstone"] = factory();
+		root["cornerstone-core"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -2397,7 +2397,7 @@ function setCanvasSize(element, canvas) {
   // The device pixel ratio is 1.0 for normal displays and > 1.0
   // For high DPI displays like Retina
   /*
-   This functionality is disabled due to buggy behavior on systems with mixed DPI's.  If the canvas
+    This functionality is disabled due to buggy behavior on systems with mixed DPI's.  If the canvas
   is created on a display with high DPI (e.g. 2.0) and then the browser window is dragged to
   a different display with a different DPI (e.g. 1.0), the canvas is not recreated so the pageToPixel
   produces incorrect results.  I couldn't find any way to determine when the DPI changed other than
@@ -2407,7 +2407,7 @@ function setCanvasSize(element, canvas) {
   so (e.g. iPad or iPhone or perhaps enumerate the displays on the system.  I am choosing
   to be cautious here since I would rather not have bug reports or safety issues related to this
   scenario.
-   var devicePixelRatio = window.devicePixelRatio;
+    var devicePixelRatio = window.devicePixelRatio;
   if(devicePixelRatio === undefined) {
       devicePixelRatio = 1.0;
   }
@@ -5921,7 +5921,7 @@ exports.dataUtilities = dataUtilities;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 /* eslint no-bitwise: 0 */
 
@@ -5937,28 +5937,28 @@ var int16Shader = {};
  */
 function storedPixelDataToImageData(image) {
 
-    // Transfer image data to alpha and luminance channels of WebGL texture
-    // Credit to @jpambrun and @fernandojsg
+  // Transfer image data to alpha and luminance channels of WebGL texture
+  // Credit to @jpambrun and @fernandojsg
 
-    // Pack int16 into three uint8 channels (r, g, b)
-    var pixelData = image.getPixelData();
-    var numberOfChannels = 3;
-    var data = new Uint8Array(image.width * image.height * numberOfChannels);
-    var offset = 0;
+  // Pack int16 into three uint8 channels (r, g, b)
+  var pixelData = image.getPixelData();
+  var numberOfChannels = 3;
+  var data = new Uint8Array(image.width * image.height * numberOfChannels);
+  var offset = 0;
 
-    for (var i = 0; i < pixelData.length; i++) {
-        var val = Math.abs(pixelData[i]);
+  for (var i = 0; i < pixelData.length; i++) {
+    var val = Math.abs(pixelData[i]);
 
-        data[offset++] = parseInt(val & 0xFF, 10);
-        data[offset++] = parseInt(val >> 8, 10);
-        data[offset++] = pixelData[i] < 0 ? 0 : 1; // 0 For negative, 1 for positive
-    }
+    data[offset++] = parseInt(val & 0xFF, 10);
+    data[offset++] = parseInt(val >> 8, 10);
+    data[offset++] = pixelData[i] < 0 ? 0 : 1; // 0 For negative, 1 for positive
+  }
 
-    return data;
+  return data;
 }
 
 var int16DataUtilities = exports.int16DataUtilities = {
-    storedPixelDataToImageData: storedPixelDataToImageData
+  storedPixelDataToImageData: storedPixelDataToImageData
 };
 
 int16Shader.frag = 'precision mediump float;' + 'uniform sampler2D u_image;' + 'uniform float ww;' + 'uniform float wc;' + 'uniform float slope;' + 'uniform float intercept;' + 'uniform int invert;' + 'varying vec2 v_texCoord;' + 'void main() {' +
@@ -5990,7 +5990,7 @@ exports.int16Shader = int16Shader;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+        value: true
 });
 var int8Shader = {};
 
@@ -6003,23 +6003,23 @@ var int8Shader = {};
  * @returns {Uint8Array} The image data for use by the WebGL shader
  */
 function storedPixelDataToImageData(image) {
-    // Transfer image data to alpha channel of WebGL texture
-    // Store data in Uint8Array
-    var pixelData = image.getPixelData();
-    var numberOfChannels = 2;
-    var data = new Uint8Array(image.width * image.height * numberOfChannels);
-    var offset = 0;
+        // Transfer image data to alpha channel of WebGL texture
+        // Store data in Uint8Array
+        var pixelData = image.getPixelData();
+        var numberOfChannels = 2;
+        var data = new Uint8Array(image.width * image.height * numberOfChannels);
+        var offset = 0;
 
-    for (var i = 0; i < pixelData.length; i++) {
-        data[offset++] = parseInt(pixelData[i], 10);
-        data[offset++] = pixelData[i] < 0 ? 0 : 1; // 0 For negative, 1 for positive
-    }
+        for (var i = 0; i < pixelData.length; i++) {
+                data[offset++] = parseInt(pixelData[i], 10);
+                data[offset++] = pixelData[i] < 0 ? 0 : 1; // 0 For negative, 1 for positive
+        }
 
-    return data;
+        return data;
 }
 
 var int8DataUtilities = exports.int8DataUtilities = {
-    storedPixelDataToImageData: storedPixelDataToImageData
+        storedPixelDataToImageData: storedPixelDataToImageData
 };
 
 int8Shader.frag = 'precision mediump float;' + 'uniform sampler2D u_image;' + 'uniform float ww;' + 'uniform float wc;' + 'uniform float slope;' + 'uniform float intercept;' + 'uniform int invert;' + 'varying vec2 v_texCoord;' + 'void main() {' +
@@ -6193,7 +6193,7 @@ exports.uint16Shader = uint16Shader;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+        value: true
 });
 var uint8Shader = {};
 
@@ -6205,20 +6205,20 @@ var uint8Shader = {};
  * @returns {Uint8Array} The image data for use by the WebGL shader
  */
 function storedPixelDataToImageData(image) {
-    // Transfer image data to alpha channel of WebGL texture
-    // Store data in Uint8Array
-    var pixelData = image.getPixelData();
-    var data = new Uint8Array(pixelData.length);
+        // Transfer image data to alpha channel of WebGL texture
+        // Store data in Uint8Array
+        var pixelData = image.getPixelData();
+        var data = new Uint8Array(pixelData.length);
 
-    for (var i = 0; i < pixelData.length; i++) {
-        data[i] = parseInt(pixelData[i], 10);
-    }
+        for (var i = 0; i < pixelData.length; i++) {
+                data[i] = parseInt(pixelData[i], 10);
+        }
 
-    return data;
+        return data;
 }
 
 var uint8DataUtilities = exports.uint8DataUtilities = {
-    storedPixelDataToImageData: storedPixelDataToImageData
+        storedPixelDataToImageData: storedPixelDataToImageData
 };
 
 uint8Shader.frag = 'precision mediump float;' + 'uniform sampler2D u_image;' + 'uniform float ww;' + 'uniform float wc;' + 'uniform float slope;' + 'uniform float intercept;' + 'uniform int invert;' + 'varying vec2 v_texCoord;' + 'void main() {' +
@@ -6314,4 +6314,4 @@ if (!Array.prototype.find) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=cornerstone.js.map
+//# sourceMappingURL=cornerstone-core.js.map
