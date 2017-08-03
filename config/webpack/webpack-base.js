@@ -8,7 +8,7 @@ const bannerPlugin = require(path.join(__dirname, 'plugins', 'banner.js'));
 module.exports = {
   context: context,
   entry: {
-    'cornerstone-core': path.join(context, 'index.js')
+    cornerstone: path.join(context, 'index.js')
   },
   target: 'web',
   output: {
