@@ -144,7 +144,7 @@ export function removeImagePromise (imageId) {
     action: 'deleteImage',
     image: cachedImage
   });
-  decache(cachedImage.imagePromise, cachedImage.imageId);
+  decache(cachedImage.imagePromise);
 
   delete imageCacheDict[imageId];
 }
@@ -159,13 +159,11 @@ export function getCacheInfo () {
 
 // This method should only be called by `removeImagePromise` because it's
 // The one that knows how to deal with shared cache keys and cache size.
-function decache (imagePromise, imageId) {
+function decache (imagePromise) {
   imagePromise.then(function (image) {
     if (image.decache) {
       image.decache();
     }
-  }).always(function () {
-    delete imageCacheDict[imageId];
   });
 }
 
