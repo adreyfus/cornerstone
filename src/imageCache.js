@@ -137,10 +137,6 @@ export function removeImagePromise (imageId) {
     throw new Error('removeImagePromise: imageId was not present in imageCache');
   }
 
-  cachedImage.imagePromise.reject({
-    description: 'Remove image promise',
-    code: 'REMOVE_IMAGE_PROMISE'
-  });
   cachedImages.splice(cachedImages.indexOf(cachedImage), 1);
   cacheSizeInBytes -= cachedImage.sizeInBytes;
   $(events).trigger('CornerstoneImageCacheChanged', {
@@ -164,11 +160,12 @@ export function getCacheInfo () {
 // The one that knows how to deal with shared cache keys and cache size.
 function decache (imagePromise) {
   // imagePromise.decache (cornerstone-wado-image-loader > 0.14.6)
-  if (imagePromise.decache) {
-    imagePromise.decache();
+  imagePromise.always(function () {
+    if (imagePromise.decache) {
+      imagePromise.decache();
+    }
+  });
 
-    return;
-  }
   // image.decache (cornerstone-wado-image-loader <= 0.14.6)
   imagePromise.then(function (image) {
     if (image.decache) {
