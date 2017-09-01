@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import computeVoi from './computeVoi.js';
 import { getEnabledElement } from './enabledElements.js';
 import getDefaultViewport from './internal/getDefaultViewport.js';
