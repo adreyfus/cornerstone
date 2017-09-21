@@ -1,14 +1,27 @@
+<<<<<<< HEAD:dist/cornerstone-core.js
 /*! cornerstone-core - 0.12.2 - 2017-08-02 | (c) 2016 Chris Hafey | https://github.com/chafey/cornerstone */
+=======
+/*! cornerstone-core - 0.12.2 - 2017-09-21 | (c) 2016 Chris Hafey | https://github.com/chafey/cornerstone */
+>>>>>>> master:dist/cornerstone.js
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
+		module.exports = factory(require("jquery"));
 	else if(typeof define === 'function' && define.amd)
+<<<<<<< HEAD:dist/cornerstone-core.js
 		define("cornerstone-core", [], factory);
 	else if(typeof exports === 'object')
 		exports["cornerstone-core"] = factory();
 	else
 		root["cornerstone-core"] = factory();
 })(this, function() {
+=======
+		define("cornerstone-core", ["jquery"], factory);
+	else if(typeof exports === 'object')
+		exports["cornerstone-core"] = factory(require("jquery"));
+	else
+		root["cornerstone"] = factory(root["$"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_46__) {
+>>>>>>> master:dist/cornerstone.js
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -74,7 +87,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD:dist/cornerstone-core.js
 /******/ 	return __webpack_require__(__webpack_require__.s = 53);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 34);
+>>>>>>> master:dist/cornerstone.js
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -283,6 +300,28 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _jquery = __webpack_require__(46);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _jquery2.default; /*
+                                     * When loading sources directly with <script type="module"> remove the line below
+                                     * (keep only the export line)
+                                     */
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 exports.default = function (element) {
   var invalidated = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
@@ -297,14 +336,14 @@ exports.default = function (element) {
 
 var _enabledElements = __webpack_require__(0);
 
-var _drawImage = __webpack_require__(2);
+var _drawImage = __webpack_require__(3);
 
 var _drawImage2 = _interopRequireDefault(_drawImage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -322,7 +361,7 @@ exports.default = function (enabledElement, invalidated) {
 };
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -370,7 +409,7 @@ exports.default = function (canvas, image) {
 };
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -389,7 +428,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -405,15 +444,23 @@ var _generateLut = __webpack_require__(8);
 
 var _generateLut2 = _interopRequireDefault(_generateLut);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _storedColorPixelDataToCanvasImageData = __webpack_require__(14);
 
 var _storedColorPixelDataToCanvasImageData2 = _interopRequireDefault(_storedColorPixelDataToCanvasImageData);
 
 var _storedRGBAPixelDataToCanvasImageData = __webpack_require__(58);
+=======
+var _storedColorPixelDataToCanvasImageData = __webpack_require__(16);
+
+var _storedColorPixelDataToCanvasImageData2 = _interopRequireDefault(_storedColorPixelDataToCanvasImageData);
+
+var _storedRGBAPixelDataToCanvasImageData = __webpack_require__(37);
+>>>>>>> master:dist/cornerstone.js
 
 var _storedRGBAPixelDataToCanvasImageData2 = _interopRequireDefault(_storedRGBAPixelDataToCanvasImageData);
 
-var _setToPixelCoordinateSystem = __webpack_require__(6);
+var _setToPixelCoordinateSystem = __webpack_require__(7);
 
 var _setToPixelCoordinateSystem2 = _interopRequireDefault(_setToPixelCoordinateSystem);
 
@@ -625,7 +672,7 @@ function addColorLayer(layer, invalidated) {
 }
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -655,7 +702,7 @@ var _calculateTransform2 = _interopRequireDefault(_calculateTransform);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -729,7 +776,7 @@ exports.default = function (image, windowWidth, windowCenter, invert, modalityLU
   return lut;
 };
 
-var _generateLutNew = __webpack_require__(12);
+var _generateLutNew = __webpack_require__(13);
 
 var _generateLutNew2 = _interopRequireDefault(_generateLutNew);
 
@@ -737,6 +784,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 /* 9 */
+<<<<<<< HEAD:dist/cornerstone-core.js
+=======
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+exports.default = function (enabledElement) {
+    // For now we will calculate it every time it is requested.  In the future, we may want to cache
+    // It in the enabled element to speed things up
+    return (0, _calculateTransform2.default)(enabledElement);
+};
+
+var _calculateTransform = __webpack_require__(17);
+
+var _calculateTransform2 = _interopRequireDefault(_calculateTransform);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 10 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -745,6 +818,60 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+<<<<<<< HEAD:dist/cornerstone-core.js
+=======
+
+var _renderer = __webpack_require__(38);
+
+var _createProgramFromString = __webpack_require__(22);
+
+var _createProgramFromString2 = _interopRequireDefault(_createProgramFromString);
+
+var _textureCache = __webpack_require__(21);
+
+var _textureCache2 = _interopRequireDefault(_textureCache);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  createProgramFromString: _createProgramFromString2.default,
+  renderer: {
+    render: _renderer.render,
+    initRenderer: _renderer.initRenderer,
+    getRenderCanvas: _renderer.getRenderCanvas,
+    isWebGLAvailable: _renderer.isWebGLAvailable
+  },
+  textureCache: _textureCache2.default,
+  isWebGLInitialized: _renderer.isWebGLInitialized
+};
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var events = {
+  name: 'cornerstone-core'
+};
+
+exports.default = events;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+>>>>>>> master:dist/cornerstone.js
 exports.renderGrayscaleImage = renderGrayscaleImage;
 exports.addGrayscaleLayer = addGrayscaleLayer;
 
@@ -756,11 +883,11 @@ var _storedPixelDataToCanvasImageData = __webpack_require__(15);
 
 var _storedPixelDataToCanvasImageData2 = _interopRequireDefault(_storedPixelDataToCanvasImageData);
 
-var _setToPixelCoordinateSystem = __webpack_require__(6);
+var _setToPixelCoordinateSystem = __webpack_require__(7);
 
 var _setToPixelCoordinateSystem2 = _interopRequireDefault(_setToPixelCoordinateSystem);
 
-var _now = __webpack_require__(4);
+var _now = __webpack_require__(5);
 
 var _now2 = _interopRequireDefault(_now);
 
@@ -987,6 +1114,7 @@ function addGrayscaleLayer(layer, invalidated) {
 }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1046,6 +1174,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 /* 12 */
+=======
+/* 13 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1088,18 +1219,26 @@ exports.default = function (image, windowWidth, windowCenter, invert, modalityLU
   return lut;
 };
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _getModalityLUT = __webpack_require__(29);
 
 var _getModalityLUT2 = _interopRequireDefault(_getModalityLUT);
 
 var _getVOILut = __webpack_require__(56);
+=======
+var _getModalityLUT = __webpack_require__(19);
+
+var _getModalityLUT2 = _interopRequireDefault(_getModalityLUT);
+
+var _getVOILut = __webpack_require__(35);
+>>>>>>> master:dist/cornerstone.js
 
 var _getVOILut2 = _interopRequireDefault(_getVOILut);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1126,7 +1265,7 @@ function requestFrame(callback) {
  */
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1236,7 +1375,7 @@ exports.default = function (image, lut, canvasImageDataData) {
   image.stats.lastStoredPixelDataToCanvasImageDataTime = (0, _now2.default)() - start;
 };
 
-var _now = __webpack_require__(4);
+var _now = __webpack_require__(5);
 
 var _now2 = _interopRequireDefault(_now);
 
@@ -1266,23 +1405,162 @@ var _guid2 = _interopRequireDefault(_guid);
 
 var _enabledElements = __webpack_require__(0);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _metaData = __webpack_require__(23);
+=======
+  var minPixelValue = image.minPixelValue;
+  var canvasImageDataIndex = 0;
+  var storedPixelDataIndex = 0;
+  var numPixels = pixelData.length;
+
+  // NOTE: As of Nov 2014, most javascript engines have lower performance when indexing negative indexes.
+  // We have a special code path for this case that improves performance.  Thanks to @jpambrun for this enhancement
+  start = (0, _now2.default)();
+  if (minPixelValue < 0) {
+    while (storedPixelDataIndex < numPixels) {
+      canvasImageDataData[canvasImageDataIndex++] = lut[pixelData[storedPixelDataIndex++] + -minPixelValue]; // Red
+      canvasImageDataData[canvasImageDataIndex++] = lut[pixelData[storedPixelDataIndex++] + -minPixelValue]; // Green
+      canvasImageDataData[canvasImageDataIndex] = lut[pixelData[storedPixelDataIndex] + -minPixelValue]; // Blue
+      storedPixelDataIndex += 2;
+      canvasImageDataIndex += 2;
+    }
+  } else {
+    while (storedPixelDataIndex < numPixels) {
+      canvasImageDataData[canvasImageDataIndex++] = lut[pixelData[storedPixelDataIndex++]]; // Red
+      canvasImageDataData[canvasImageDataIndex++] = lut[pixelData[storedPixelDataIndex++]]; // Green
+      canvasImageDataData[canvasImageDataIndex] = lut[pixelData[storedPixelDataIndex]]; // Blue
+      storedPixelDataIndex += 2;
+      canvasImageDataIndex += 2;
+    }
+  }
+  image.stats.lastStoredPixelDataToCanvasImageDataTime = (0, _now2.default)() - start;
+};
+
+var _now = __webpack_require__(5);
+
+var _now2 = _interopRequireDefault(_now);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (enabledElement, scale) {
+
+  var transform = new _transform.Transform();
+
+  transform.translate(enabledElement.canvas.width / 2, enabledElement.canvas.height / 2);
+
+  // Apply the rotation before scaling for non square pixels
+  var angle = enabledElement.viewport.rotation;
+
+  if (angle !== 0) {
+    transform.rotate(angle * Math.PI / 180);
+  }
+
+  // Apply the scale
+  var widthScale = enabledElement.viewport.scale;
+  var heightScale = enabledElement.viewport.scale;
+
+  if (enabledElement.image.rowPixelSpacing < enabledElement.image.columnPixelSpacing) {
+    widthScale *= enabledElement.image.columnPixelSpacing / enabledElement.image.rowPixelSpacing;
+  } else if (enabledElement.image.columnPixelSpacing < enabledElement.image.rowPixelSpacing) {
+    heightScale *= enabledElement.image.rowPixelSpacing / enabledElement.image.columnPixelSpacing;
+  }
+  transform.scale(widthScale, heightScale);
+
+  // Unrotate to so we can translate unrotated
+  if (angle !== 0) {
+    transform.rotate(-angle * Math.PI / 180);
+  }
+
+  // Apply the pan offset
+  transform.translate(enabledElement.viewport.translation.x, enabledElement.viewport.translation.y);
+
+  // Rotate again so we can apply general scale
+  if (angle !== 0) {
+    transform.rotate(angle * Math.PI / 180);
+  }
+
+  if (scale !== undefined) {
+    // Apply the font scale
+    transform.scale(scale, scale);
+  }
+
+  // Apply Flip if required
+  if (enabledElement.viewport.hflip) {
+    transform.scale(-1, 1);
+  }
+
+  if (enabledElement.viewport.vflip) {
+    transform.scale(1, -1);
+  }
+
+  // Translate the origin back to the corner of the image so the event handlers can draw in image coordinate system
+  transform.translate(-enabledElement.image.width / 2, -enabledElement.image.height / 2);
+
+  return transform;
+};
+
+var _transform = __webpack_require__(20);
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.addLayer = addLayer;
+exports.removeLayer = removeLayer;
+exports.getLayer = getLayer;
+exports.getLayers = getLayers;
+exports.getVisibleLayers = getVisibleLayers;
+exports.setActiveLayer = setActiveLayer;
+exports.getActiveLayer = getActiveLayer;
+
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _guid = __webpack_require__(50);
+
+var _guid2 = _interopRequireDefault(_guid);
+
+var _enabledElements = __webpack_require__(0);
+
+var _metaData = __webpack_require__(24);
+>>>>>>> master:dist/cornerstone.js
 
 var _metaData2 = _interopRequireDefault(_metaData);
 
-var _getDefaultViewport = __webpack_require__(3);
+var _getDefaultViewport = __webpack_require__(4);
 
 var _getDefaultViewport2 = _interopRequireDefault(_getDefaultViewport);
 
-var _updateImage = __webpack_require__(1);
+var _updateImage = __webpack_require__(2);
 
 var _updateImage2 = _interopRequireDefault(_updateImage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 __webpack_require__(68);
 __webpack_require__(67);
 
+=======
+>>>>>>> master:dist/cornerstone.js
 /**
  * Helper function to trigger an event on a Cornerstone element with
  * a specific layerId
@@ -1302,7 +1580,7 @@ function triggerEvent(eventName, enabledElement, layerId) {
     layerId: layerId
   };
 
-  $(element).trigger(eventName, eventData);
+  (0, _jquery2.default)(element).trigger(eventName, eventData);
 }
 
 /**
@@ -1355,6 +1633,12 @@ function addLayer(element, image, options) {
   var enabledElement = (0, _enabledElements.getEnabledElement)(element);
   var layers = enabledElement.layers;
   var viewport = (0, _getDefaultViewport2.default)(enabledElement.canvas, image);
+
+  // Override the defaults if any optional viewport settings
+  // have been specified
+  if (options && options.viewport) {
+    viewport = Object.assign(viewport, options.viewport);
+  }
 
   // Set syncViewports to true by default when a new layer is added
   if (enabledElement.syncViewports !== false) {
@@ -1497,7 +1781,11 @@ function getActiveLayer(element) {
 }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 17 */
+=======
+/* 19 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1524,12 +1812,18 @@ exports.default = function (enabledElement, scale) {
   var widthScale = enabledElement.viewport.scale;
   var heightScale = enabledElement.viewport.scale;
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   if (enabledElement.image.rowPixelSpacing < enabledElement.image.columnPixelSpacing) {
     widthScale *= enabledElement.image.columnPixelSpacing / enabledElement.image.rowPixelSpacing;
   } else if (enabledElement.image.columnPixelSpacing < enabledElement.image.rowPixelSpacing) {
     heightScale *= enabledElement.image.rowPixelSpacing / enabledElement.image.columnPixelSpacing;
   }
   transform.scale(widthScale, heightScale);
+=======
+/**
+ * This module generates a Modality LUT
+ */
+>>>>>>> master:dist/cornerstone.js
 
   // Unrotate to so we can translate unrotated
   if (angle !== 0) {
@@ -1567,7 +1861,11 @@ exports.default = function (enabledElement, scale) {
 var _transform = __webpack_require__(30);
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 18 */
+=======
+/* 20 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1598,12 +1896,469 @@ exports.default = {
 "use strict";
 
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.restoreImage = exports.convertToFalseColorImage = exports.convertImageToFalseColorImage = undefined;
 
 var _enabledElements = __webpack_require__(0);
+=======
+// Remember that this does not account for any CSS transforms applied to the canvas
+var Transform = exports.Transform = function () {
+  function Transform() {
+    _classCallCheck(this, Transform);
+
+    this.reset();
+  }
+
+  _createClass(Transform, [{
+    key: "reset",
+    value: function reset() {
+      this.m = [1, 0, 0, 1, 0, 0];
+    }
+  }, {
+    key: "clone",
+    value: function clone() {
+      var transform = new Transform();
+
+      transform.m[0] = this.m[0];
+      transform.m[1] = this.m[1];
+      transform.m[2] = this.m[2];
+      transform.m[3] = this.m[3];
+      transform.m[4] = this.m[4];
+      transform.m[5] = this.m[5];
+
+      return transform;
+    }
+  }, {
+    key: "multiply",
+    value: function multiply(matrix) {
+      var m11 = this.m[0] * matrix.m[0] + this.m[2] * matrix.m[1];
+      var m12 = this.m[1] * matrix.m[0] + this.m[3] * matrix.m[1];
+
+      var m21 = this.m[0] * matrix.m[2] + this.m[2] * matrix.m[3];
+      var m22 = this.m[1] * matrix.m[2] + this.m[3] * matrix.m[3];
+
+      var dx = this.m[0] * matrix.m[4] + this.m[2] * matrix.m[5] + this.m[4];
+      var dy = this.m[1] * matrix.m[4] + this.m[3] * matrix.m[5] + this.m[5];
+
+      this.m[0] = m11;
+      this.m[1] = m12;
+      this.m[2] = m21;
+      this.m[3] = m22;
+      this.m[4] = dx;
+      this.m[5] = dy;
+    }
+  }, {
+    key: "invert",
+    value: function invert() {
+      var d = 1 / (this.m[0] * this.m[3] - this.m[1] * this.m[2]);
+      var m0 = this.m[3] * d;
+      var m1 = -this.m[1] * d;
+      var m2 = -this.m[2] * d;
+      var m3 = this.m[0] * d;
+      var m4 = d * (this.m[2] * this.m[5] - this.m[3] * this.m[4]);
+      var m5 = d * (this.m[1] * this.m[4] - this.m[0] * this.m[5]);
+
+      this.m[0] = m0;
+      this.m[1] = m1;
+      this.m[2] = m2;
+      this.m[3] = m3;
+      this.m[4] = m4;
+      this.m[5] = m5;
+    }
+  }, {
+    key: "rotate",
+    value: function rotate(rad) {
+      var c = Math.cos(rad);
+      var s = Math.sin(rad);
+      var m11 = this.m[0] * c + this.m[2] * s;
+      var m12 = this.m[1] * c + this.m[3] * s;
+      var m21 = this.m[0] * -s + this.m[2] * c;
+      var m22 = this.m[1] * -s + this.m[3] * c;
+
+      this.m[0] = m11;
+      this.m[1] = m12;
+      this.m[2] = m21;
+      this.m[3] = m22;
+    }
+  }, {
+    key: "translate",
+    value: function translate(x, y) {
+      this.m[4] += this.m[0] * x + this.m[2] * y;
+      this.m[5] += this.m[1] * x + this.m[3] * y;
+    }
+  }, {
+    key: "scale",
+    value: function scale(sx, sy) {
+      this.m[0] *= sx;
+      this.m[1] *= sx;
+      this.m[2] *= sy;
+      this.m[3] *= sy;
+    }
+  }, {
+    key: "transformPoint",
+    value: function transformPoint(px, py) {
+      var x = px;
+      var y = py;
+
+      px = x * this.m[0] + y * this.m[2] + this.m[4];
+      py = x * this.m[1] + y * this.m[3] + this.m[5];
+
+      return {
+        x: px,
+        y: py
+      };
+    }
+  }]);
+
+  return Transform;
+}();
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _events = __webpack_require__(11);
+
+var _events2 = _interopRequireDefault(_events);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * This module deals with caching image textures in VRAM for WebGL
+ */
+
+var imageCache = {};
+
+var cachedImages = [];
+
+var maximumSizeInBytes = 1024 * 1024 * 256; // 256 MB
+var cacheSizeInBytes = 0;
+
+function getCacheInfo() {
+  return {
+    maximumSizeInBytes: maximumSizeInBytes,
+    cacheSizeInBytes: cacheSizeInBytes,
+    numberOfImagesCached: cachedImages.length
+  };
+}
+
+function purgeCacheIfNecessary() {
+  // If max cache size has not been exceeded, do nothing
+  if (cacheSizeInBytes <= maximumSizeInBytes) {
+    return;
+  }
+
+  // Cache size has been exceeded, create list of images sorted by timeStamp
+  // So we can purge the least recently used image
+  function compare(a, b) {
+    if (a.timeStamp > b.timeStamp) {
+      return -1;
+    }
+    if (a.timeStamp < b.timeStamp) {
+      return 1;
+    }
+
+    return 0;
+  }
+  cachedImages.sort(compare);
+
+  // Remove images as necessary
+  while (cacheSizeInBytes > maximumSizeInBytes) {
+    var lastCachedImage = cachedImages[cachedImages.length - 1];
+
+    cacheSizeInBytes -= lastCachedImage.sizeInBytes;
+    delete imageCache[lastCachedImage.imageId];
+    cachedImages.pop();
+
+    (0, _jquery2.default)(_events2.default).trigger('CornerstoneWebGLTextureRemoved', { imageId: lastCachedImage.imageId });
+  }
+
+  var cacheInfo = getCacheInfo();
+
+  (0, _jquery2.default)(_events2.default).trigger('CornerstoneWebGLTextureCacheFull', cacheInfo);
+}
+
+function setMaximumSizeBytes(numBytes) {
+  if (numBytes === undefined) {
+    throw new Error('setMaximumSizeBytes: parameter numBytes must not be undefined');
+  }
+  if (numBytes.toFixed === undefined) {
+    throw new Error('setMaximumSizeBytes: parameter numBytes must be a number');
+  }
+
+  maximumSizeInBytes = numBytes;
+  purgeCacheIfNecessary();
+}
+
+function putImageTexture(image, imageTexture) {
+  var imageId = image.imageId;
+
+  if (image === undefined) {
+    throw new Error('putImageTexture: image must not be undefined');
+  }
+
+  if (imageId === undefined) {
+    throw new Error('putImageTexture: imageId must not be undefined');
+  }
+
+  if (imageTexture === undefined) {
+    throw new Error('putImageTexture: imageTexture must not be undefined');
+  }
+
+  if (Object.prototype.hasOwnProperty.call(imageCache, imageId) === true) {
+    throw new Error('putImageTexture: imageId already in cache');
+  }
+
+  var cachedImage = {
+    imageId: imageId,
+    imageTexture: imageTexture,
+    timeStamp: new Date(),
+    sizeInBytes: imageTexture.sizeInBytes
+  };
+
+  imageCache[imageId] = cachedImage;
+  cachedImages.push(cachedImage);
+
+  if (imageTexture.sizeInBytes === undefined) {
+    throw new Error('putImageTexture: imageTexture.sizeInBytes must not be undefined');
+  }
+  if (imageTexture.sizeInBytes.toFixed === undefined) {
+    throw new Error('putImageTexture: imageTexture.sizeInBytes is not a number');
+  }
+  cacheSizeInBytes += cachedImage.sizeInBytes;
+  purgeCacheIfNecessary();
+}
+
+function getImageTexture(imageId) {
+  if (imageId === undefined) {
+    throw new Error('getImageTexture: imageId must not be undefined');
+  }
+  var cachedImage = imageCache[imageId];
+
+  if (cachedImage === undefined) {
+    return;
+  }
+
+  // Bump time stamp for cached image
+  cachedImage.timeStamp = new Date();
+
+  return cachedImage.imageTexture;
+}
+
+function removeImageTexture(imageId) {
+  if (imageId === undefined) {
+    throw new Error('removeImageTexture: imageId must not be undefined');
+  }
+  var cachedImage = imageCache[imageId];
+
+  if (cachedImage === undefined) {
+    throw new Error('removeImageTexture: imageId must not be undefined');
+  }
+  cachedImages.splice(cachedImages.indexOf(cachedImage), 1);
+  cacheSizeInBytes -= cachedImage.sizeInBytes;
+  delete imageCache[imageId];
+
+  return cachedImage.imageTexture;
+}
+
+function purgeCache() {
+  while (cachedImages.length > 0) {
+    var removedCachedImage = cachedImages.pop();
+
+    delete imageCache[removedCachedImage.imageId];
+  }
+  cacheSizeInBytes = 0;
+}
+
+exports.default = {
+  purgeCache: purgeCache,
+  getImageTexture: getImageTexture,
+  putImageTexture: putImageTexture,
+  removeImageTexture: removeImageTexture,
+  setMaximumSizeBytes: setMaximumSizeBytes
+};
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (gl, vertexShaderSrc, fragShaderSrc) {
+  var vertexShader = compileShader(gl, vertexShaderSrc, gl.VERTEX_SHADER);
+  var fragShader = compileShader(gl, fragShaderSrc, gl.FRAGMENT_SHADER);
+
+  return createProgram(gl, vertexShader, fragShader);
+};
+
+/**
+ * Creates and compiles a shader.
+ *
+ * @param {!WebGLRenderingContext} gl The WebGL Context.
+ * @param {string} shaderSource The GLSL source code for the shader.
+ * @param {number} shaderType The type of shader, VERTEX_SHADER or FRAGMENT_SHADER.
+ *
+ * @return {!WebGLShader} The shader.
+ */
+function compileShader(gl, shaderSource, shaderType) {
+
+  // Create the shader object
+  var shader = gl.createShader(shaderType);
+
+  // Set the shader source code.
+  gl.shaderSource(shader, shaderSource);
+
+  // Compile the shader
+  gl.compileShader(shader);
+
+  // Check if it compiled
+  var success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
+
+  if (!success && !gl.isContextLost()) {
+    // Something went wrong during compilation; get the error
+    var infoLog = gl.getShaderInfoLog(shader);
+
+    console.error("Could not compile shader:\n" + infoLog);
+  }
+
+  return shader;
+}
+
+/**
+ * Creates a program from 2 shaders.
+ *
+ * @param {!WebGLRenderingContext} gl The WebGL context.
+ * @param {!WebGLShader} vertexShader A vertex shader.
+ * @param {!WebGLShader} fragmentShader A fragment shader.
+ * @return {!WebGLProgram} A program.
+ */
+function createProgram(gl, vertexShader, fragmentShader) {
+
+  // Create a program.
+  var program = gl.createProgram();
+
+  // Attach the shaders.
+  gl.attachShader(program, vertexShader);
+  gl.attachShader(program, fragmentShader);
+
+  // Link the program.
+  gl.linkProgram(program);
+
+  // Check if it linked.
+  var success = gl.getProgramParameter(program, gl.LINK_STATUS);
+
+  if (!success && !gl.isContextLost()) {
+    // Something went wrong with the link
+    var infoLog = gl.getProgramInfoLog(program);
+
+    console.error("WebGL program filed to link:\n" + infoLog);
+  }
+
+  return program;
+}
+
+/**
+ * Creates a program from 2 shaders source (Strings)
+ * @param  {!WebGLRenderingContext} gl              The WebGL context.
+ * @param  {!WebGLShader} vertexShaderSrc   Vertex shader string
+ * @param  {!WebGLShader} fragShaderSrc Fragment shader string
+ * @return {!WebGLProgram}                 A program
+ */
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.renderWebImage = renderWebImage;
+
+var _setToPixelCoordinateSystem = __webpack_require__(7);
+
+var _setToPixelCoordinateSystem2 = _interopRequireDefault(_setToPixelCoordinateSystem);
+
+var _renderColorImage = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * API function to draw a standard web image (PNG, JPG) to an enabledImage
+ *
+ * @param {EnabledElement} enabledElement The Cornerstone Enabled Element to redraw
+ * @param {Boolean} invalidated - true if pixel data has been invalidated and cached rendering should not be used
+ * @returns {void}
+ */
+/**
+ * This module is responsible for drawing an image to an enabled elements canvas element
+ */
+function renderWebImage(enabledElement, invalidated) {
+
+  if (enabledElement === undefined) {
+    throw new Error('drawImage: enabledElement parameter must not be undefined');
+  }
+  var image = enabledElement.image;
+
+  if (image === undefined) {
+    throw new Error('drawImage: image must be loaded before it can be drawn');
+  }
+
+  // Get the canvas context and reset the transform
+  var context = enabledElement.canvas.getContext('2d');
+
+  context.setTransform(1, 0, 0, 1, 0, 0);
+
+  // Clear the canvas
+  context.fillStyle = 'black';
+  context.fillRect(0, 0, enabledElement.canvas.width, enabledElement.canvas.height);
+
+  // Turn off image smooth/interpolation if pixelReplication is set in the viewport
+  if (enabledElement.viewport.pixelReplication === true) {
+    context.imageSmoothingEnabled = false;
+    context.mozImageSmoothingEnabled = false; // Firefox doesn't support imageSmoothingEnabled yet
+  } else {
+    context.imageSmoothingEnabled = true;
+    context.mozImageSmoothingEnabled = true;
+  }
+
+  // Save the canvas context state and apply the viewport properties
+  (0, _setToPixelCoordinateSystem2.default)(enabledElement, context);
+
+  // If the viewport ww/wc and invert all match the initial state of the image, we can draw the image
+  // Directly.  If any of those are changed, we call renderColorImage() to apply the lut
+  if (enabledElement.viewport.voi.windowWidth === enabledElement.image.windowWidth && enabledElement.viewport.voi.windowCenter === enabledElement.image.windowCenter && enabledElement.viewport.invert === false) {
+    context.drawImage(image.getImage(), 0, 0, image.width, image.height, 0, 0, image.width, image.height);
+  } else {
+    (0, _renderColorImage.renderColorImage)(enabledElement, invalidated);
+  }
+}
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> master:dist/cornerstone.js
 
 var _pixelDataToFalseColorData = __webpack_require__(24);
 
@@ -1614,11 +2369,19 @@ var _colormap = __webpack_require__(27);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
+<<<<<<< HEAD:dist/cornerstone-core.js
  * Retrieves the minimum and maximum pixel values from an Array of pixel data
  *
  * @param {Array} pixelData The input pixel data array
  *
  * @returns {{minPixelValue: Number, maxPixelValue: Number}} The minimum and maximum pixel values in the input Array
+=======
+ * Adds a metadata provider with the specified priority
+ * @param {Function} provider Metadata provider function
+ * @param {Number} [priority=0] - 0 is default/normal, > 0 is high, < 0 is low
+ *
+ * @returns {void}
+>>>>>>> master:dist/cornerstone.js
  */
 function getPixelValues(pixelData) {
   var minPixelValue = Number.MAX_VALUE;
@@ -1639,12 +2402,20 @@ function getPixelValues(pixelData) {
 }
 
 /**
+<<<<<<< HEAD:dist/cornerstone-core.js
  * Retrieve a function that will allow an image object to be reset to its original form
  * after a false color mapping transformation
  *
  * @param {Image} image A Cornerstone Image Object
  *
  * @return {Function} A function for resetting an Image Object to its original form
+=======
+ * Removes the specified provider
+ *
+ * @param {Function} provider Metadata provider function
+ *
+ * @returns {void}
+>>>>>>> master:dist/cornerstone.js
  */
 function getRestoreImageMethod(image) {
   if (image.restore) {
@@ -1685,8 +2456,24 @@ function getRestoreImageMethod(image) {
   };
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 //
 // Then we need to make sure it will be converted into a colormap object if it's as string.
+=======
+/**
+ * Gets metadata from the registered metadata providers.  Will call each one from highest priority to lowest
+ * until one responds
+ *
+ * @param {String} type The type of metadata requested from the metadata store
+ * @param {String} imageId The Cornerstone Image Object's imageId
+ *
+ * @returns {*} The metadata retrieved from the metadata store
+ */
+function getMetaData(type, imageId) {
+  // Invoke each provider in priority order until one returns something
+  for (var i = 0; i < providers.length; i++) {
+    var result = providers[i].provider(type, imageId);
+>>>>>>> master:dist/cornerstone.js
 
 /**
  * User can pass a colormap or its id as string to some of these public functions.
@@ -1703,6 +2490,7 @@ function ensuresColormap(colormap) {
   return colormap;
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 /**
  * Restores a false color image to its original version
  *
@@ -1712,6 +2500,11 @@ function ensuresColormap(colormap) {
 function restoreImage(image) {
   if (image.restore && typeof image.restore === 'function') {
     image.restore();
+=======
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> master:dist/cornerstone.js
 
     return true;
   }
@@ -1746,25 +2539,43 @@ function convertImageToFalseColorImage(image, colormap) {
   // Restore the image attributes updated when converting to a false color image
   restoreImage(image);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   // Convert the image to a false color image
   if (colormapId) {
     var minPixelValue = image.minPixelValue || 0;
     var maxPixelValue = image.maxPixelValue || 255;
+=======
+  (0, _jquery2.default)(element).trigger('CornerstoneElementResized', eventData);
+>>>>>>> master:dist/cornerstone.js
 
     image.restore = getRestoreImageMethod(image);
 
     var lookupTable = colormap.createLookupTable();
 
+<<<<<<< HEAD:dist/cornerstone-core.js
     lookupTable.setTableRange(minPixelValue, maxPixelValue);
 
     // Update the pixel data and render the new image
     (0, _pixelDataToFalseColorData2.default)(image, lookupTable);
+=======
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _enabledElements = __webpack_require__(0);
+
+var _fitToWindow = __webpack_require__(26);
+>>>>>>> master:dist/cornerstone.js
 
     // Update min and max pixel values
     var pixelValues = getPixelValues(image.getPixelData());
 
+<<<<<<< HEAD:dist/cornerstone-core.js
     image.minPixelValue = pixelValues.minPixelValue;
     image.maxPixelValue = pixelValues.maxPixelValue;
+=======
+var _updateImage = __webpack_require__(2);
+>>>>>>> master:dist/cornerstone.js
 
     // Cache the last colormapId used for performance
     // Then it doesn't need to be re-rendered on next
@@ -1795,7 +2606,11 @@ exports.convertToFalseColorImage = convertToFalseColorImage;
 exports.restoreImage = restoreImage;
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 20 */
+=======
+/* 26 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1822,7 +2637,7 @@ exports.default = function (element) {
 
 var _enabledElements = __webpack_require__(0);
 
-var _updateImage = __webpack_require__(1);
+var _updateImage = __webpack_require__(2);
 
 var _updateImage2 = _interopRequireDefault(_updateImage);
 
@@ -1855,6 +2670,7 @@ function getImageSize(enabledElement) {
  * @param {HTMLElement} element The Cornerstone element to update
  * @returns {void}
  */
+<<<<<<< HEAD:dist/cornerstone-core.js
 
 /***/ }),
 /* 21 */
@@ -1894,6 +2710,11 @@ var _enabledElements = __webpack_require__(0);
 
 /***/ }),
 /* 22 */
+=======
+
+/***/ }),
+/* 27 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1902,6 +2723,7 @@ var _enabledElements = __webpack_require__(0);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+<<<<<<< HEAD:dist/cornerstone-core.js
 exports.cachedImages = undefined;
 exports.setMaximumSizeBytes = setMaximumSizeBytes;
 exports.putImagePromise = putImagePromise;
@@ -1910,15 +2732,34 @@ exports.removeImagePromise = removeImagePromise;
 exports.getCacheInfo = getCacheInfo;
 exports.purgeCache = purgeCache;
 exports.changeImageIdCacheSize = changeImageIdCacheSize;
+=======
+exports.restoreImage = exports.convertToFalseColorImage = exports.convertImageToFalseColorImage = undefined;
+
+var _enabledElements = __webpack_require__(0);
+
+var _pixelDataToFalseColorData = __webpack_require__(28);
+>>>>>>> master:dist/cornerstone.js
 
 var _events = __webpack_require__(7);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _events2 = _interopRequireDefault(_events);
+=======
+var _colormap = __webpack_require__(30);
+>>>>>>> master:dist/cornerstone.js
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
+<<<<<<< HEAD:dist/cornerstone-core.js
  * This module deals with caching images
+=======
+ * Retrieves the minimum and maximum pixel values from an Array of pixel data
+ *
+ * @param {Array} pixelData The input pixel data array
+ *
+ * @returns {{minPixelValue: Number, maxPixelValue: Number}} The minimum and maximum pixel values in the input Array
+>>>>>>> master:dist/cornerstone.js
  */
 var maximumSizeInBytes = 1024 * 1024 * 1024; // 1 GB
 var cacheSizeInBytes = 0;
@@ -1941,10 +2782,24 @@ function setMaximumSizeBytes(numBytes) {
   purgeCacheIfNecessary();
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 function purgeCacheIfNecessary() {
   // If max cache size has not been exceeded, do nothing
   if (cacheSizeInBytes <= maximumSizeInBytes) {
     return;
+=======
+/**
+ * Retrieve a function that will allow an image object to be reset to its original form
+ * after a false color mapping transformation
+ *
+ * @param {Image} image A Cornerstone Image Object
+ *
+ * @return {Function} A function for resetting an Image Object to its original form
+ */
+function getRestoreImageMethod(image) {
+  if (image.restore) {
+    return image.restore;
+>>>>>>> master:dist/cornerstone.js
   }
 
   // Cache size has been exceeded, create list of images sorted by timeStamp
@@ -2024,8 +2879,21 @@ function getImagePromise(imageId) {
   }
   var cachedImage = imageCacheDict[imageId];
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   if (cachedImage === undefined) {
     return;
+=======
+/**
+ * User can pass a colormap or its id as string to some of these public functions.
+ * Then we need to make sure it will be converted into a colormap object if it's a string.
+ *
+ * @param {*} colormap A colormap ID or Object
+ * @return {*} The colormap
+ */
+function ensuresColormap(colormap) {
+  if (colormap && typeof colormap === 'string') {
+    colormap = (0, _colormap.getColormap)(colormap);
+>>>>>>> master:dist/cornerstone.js
   }
 
   // Bump time stamp for cached image
@@ -2034,11 +2902,23 @@ function getImagePromise(imageId) {
   return cachedImage.imagePromise;
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 function removeImagePromise(imageId) {
   if (imageId === undefined) {
     throw new Error('removeImagePromise: imageId must not be undefined');
   }
   var cachedImage = imageCacheDict[imageId];
+=======
+/**
+ * Restores a false color image to its original version
+ *
+ * @param {Image} image A Cornerstone Image Object
+ * @returns {Boolean} True if the image object had a valid restore function, which was run. Otherwise, false.
+ */
+function restoreImage(image) {
+  if (image.restore && typeof image.restore === 'function') {
+    image.restore();
+>>>>>>> master:dist/cornerstone.js
 
   if (cachedImage === undefined) {
     throw new Error('removeImagePromise: imageId was not present in imageCache');
@@ -2052,6 +2932,7 @@ function removeImagePromise(imageId) {
   delete imageCacheDict[imageId];
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 function getCacheInfo() {
   return {
     maximumSizeInBytes: maximumSizeInBytes,
@@ -2077,6 +2958,18 @@ function purgeCache() {
     var removedCachedImage = cachedImages[0];
 
     removeImagePromise(removedCachedImage.imageId);
+=======
+/**
+ * Convert an image to a false color image
+ * @param {Image} image A Cornerstone Image Object
+ * @param {String|Object} colormap - it can be a colormap object or a colormap id (string)
+ *
+ * @returns {Boolean} - Whether or not the image has been converted to a false color image
+ */
+function convertImageToFalseColorImage(image, colormap) {
+  if (image.color && !image.falseColor) {
+    throw new Error('Color transforms are not implemented yet');
+>>>>>>> master:dist/cornerstone.js
   }
 }
 
@@ -2135,11 +3028,21 @@ function addProvider(provider) {
 
   var i = void 0;
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   // Find the right spot to insert this provider based on priority
   for (i = 0; i < providers.length; i++) {
     if (providers[i].priority <= priority) {
       break;
     }
+=======
+    image.windowWidth = 255;
+    image.windowCenter = 128;
+
+    // Cache the last colormapId used for performance
+    // Then it doesn't need to be re-rendered on next
+    // Time if the user hasn't updated it
+    image.colormapId = colormapId;
+>>>>>>> master:dist/cornerstone.js
   }
 
   // Insert the decode task at position i
@@ -2150,9 +3053,16 @@ function addProvider(provider) {
 }
 
 /**
+<<<<<<< HEAD:dist/cornerstone-core.js
  * Removes the specified provider
  *
  * @param {Function} provider Metadata provider function
+=======
+ * Convert the image of a element to a false color image
+ *
+ * @param {HTMLElement} element The Cornerstone element
+ * @param {*} colormap - it can be a colormap object or a colormap id (string)
+>>>>>>> master:dist/cornerstone.js
  *
  * @returns {void}
  */
@@ -2193,7 +3103,11 @@ exports.default = {
 };
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 24 */
+=======
+/* 28 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2254,6 +3168,7 @@ exports.default = function (image, lookupTable) {
   image.rgba = true;
   image.lut = undefined;
   image.slope = 1;
+  image.intercept = 0;
   image.minPixelValue = 0;
   image.maxPixelValue = 255;
   image.windowWidth = 255;
@@ -2263,14 +3178,22 @@ exports.default = function (image, lookupTable) {
   };
 };
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _index = __webpack_require__(18);
+=======
+var _index = __webpack_require__(29);
+>>>>>>> master:dist/cornerstone.js
 
 var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 25 */
+=======
+/* 29 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2281,9 +3204,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.renderWebImage = renderWebImage;
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _setToPixelCoordinateSystem = __webpack_require__(6);
 
 var _setToPixelCoordinateSystem2 = _interopRequireDefault(_setToPixelCoordinateSystem);
+=======
+var _colormap = __webpack_require__(30);
+
+var _lookupTable = __webpack_require__(31);
+>>>>>>> master:dist/cornerstone.js
 
 var _renderColorImage = __webpack_require__(5);
 
@@ -2428,7 +3357,11 @@ function setCanvasSize(element, canvas) {
  */
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 27 */
+=======
+/* 30 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2440,7 +3373,11 @@ Object.defineProperty(exports, "__esModule", {
 exports.getColormapsList = getColormapsList;
 exports.getColormap = getColormap;
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _lookupTable = __webpack_require__(28);
+=======
+var _lookupTable = __webpack_require__(31);
+>>>>>>> master:dist/cornerstone.js
 
 var _lookupTable2 = _interopRequireDefault(_lookupTable);
 
@@ -2899,7 +3836,11 @@ function getColormap(id, colormapData) {
 }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 28 */
+=======
+/* 31 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3244,7 +4185,11 @@ function LookupTable() {
 }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 29 */
+=======
+/* 32 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3292,7 +4237,11 @@ function generateNonLinearModalityLUT(modalityLUT) {
 }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 30 */
+=======
+/* 33 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3302,7 +4251,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+=======
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _events = __webpack_require__(11);
+>>>>>>> master:dist/cornerstone.js
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -3384,6 +4341,7 @@ var Transform = exports.Transform = function () {
       var m4 = d * (this.m[2] * this.m[5] - this.m[3] * this.m[4]);
       var m5 = d * (this.m[1] * this.m[4] - this.m[0] * this.m[5]);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
       this.m[0] = m0;
       this.m[1] = m1;
       this.m[2] = m2;
@@ -3400,6 +4358,10 @@ var Transform = exports.Transform = function () {
       var m12 = this.m[1] * c + this.m[3] * s;
       var m21 = this.m[0] * -s + this.m[2] * c;
       var m22 = this.m[1] * -s + this.m[3] * c;
+=======
+    (0, _jquery2.default)(_events2.default).trigger('CornerstoneImageCachePromiseRemoved', { imageId: imageId });
+  }
+>>>>>>> master:dist/cornerstone.js
 
       this.m[0] = m11;
       this.m[1] = m12;
@@ -3426,8 +4388,13 @@ var Transform = exports.Transform = function () {
       var x = px;
       var y = py;
 
+<<<<<<< HEAD:dist/cornerstone-core.js
       px = x * this.m[0] + y * this.m[2] + this.m[4];
       py = x * this.m[1] + y * this.m[3] + this.m[5];
+=======
+  (0, _jquery2.default)(_events2.default).trigger('CornerstoneImageCacheFull', cacheInfo);
+}
+>>>>>>> master:dist/cornerstone.js
 
       return {
         x: px,
@@ -3443,7 +4410,18 @@ var Transform = exports.Transform = function () {
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 "use strict";
+=======
+  imagePromise.then(function (image) {
+    if (cachedImages.indexOf(cachedImage) === -1) {
+      // If the image has been purged before being loaded, we stop here.
+      return;
+    }
+
+    cachedImage.loaded = true;
+    cachedImage.image = image;
+>>>>>>> master:dist/cornerstone.js
 
 
 Object.defineProperty(exports, "__esModule", {
@@ -3532,7 +4510,11 @@ function createProgram(gl, vertexShader, fragmentShader) {
  */
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 32 */
+=======
+/* 34 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3542,22 +4524,38 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _events = __webpack_require__(7);
+=======
+var _drawImage = __webpack_require__(3);
+>>>>>>> master:dist/cornerstone.js
 
 var _events2 = _interopRequireDefault(_events);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+=======
+var _generateLut = __webpack_require__(8);
+>>>>>>> master:dist/cornerstone.js
 
 /**
  * This module deals with caching image textures in VRAM for WebGL
  */
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var imageCache = {};
+=======
+var _generateLutNew = __webpack_require__(13);
+>>>>>>> master:dist/cornerstone.js
 
 var cachedImages = [];
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var maximumSizeInBytes = 1024 * 1024 * 256; // 256 MB
 var cacheSizeInBytes = 0;
+=======
+var _getDefaultViewport = __webpack_require__(4);
+>>>>>>> master:dist/cornerstone.js
 
 function getCacheInfo() {
   return {
@@ -3573,6 +4571,7 @@ function purgeCacheIfNecessary() {
     return;
   }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   // Cache size has been exceeded, create list of images sorted by timeStamp
   // So we can purge the least recently used image
   function compare(a, b) {
@@ -3582,14 +4581,21 @@ function purgeCacheIfNecessary() {
     if (a.timeStamp < b.timeStamp) {
       return 1;
     }
+=======
+var _requestAnimationFrame = __webpack_require__(14);
+>>>>>>> master:dist/cornerstone.js
 
     return 0;
   }
   cachedImages.sort(compare);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   // Remove images as necessary
   while (cacheSizeInBytes > maximumSizeInBytes) {
     var lastCachedImage = cachedImages[cachedImages.length - 1];
+=======
+var _storedPixelDataToCanvasImageData = __webpack_require__(15);
+>>>>>>> master:dist/cornerstone.js
 
     cacheSizeInBytes -= lastCachedImage.sizeInBytes;
     delete imageCache[lastCachedImage.imageId];
@@ -3598,10 +4604,14 @@ function purgeCacheIfNecessary() {
     $(_events2.default).trigger('CornerstoneWebGLTextureRemoved', { imageId: lastCachedImage.imageId });
   }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   var cacheInfo = getCacheInfo();
 
   $(_events2.default).trigger('CornerstoneWebGLTextureCacheFull', cacheInfo);
 }
+=======
+var _storedColorPixelDataToCanvasImageData = __webpack_require__(16);
+>>>>>>> master:dist/cornerstone.js
 
 function setMaximumSizeBytes(numBytes) {
   if (numBytes === undefined) {
@@ -3611,35 +4621,51 @@ function setMaximumSizeBytes(numBytes) {
     throw new Error('setMaximumSizeBytes: parameter numBytes must be a number');
   }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   maximumSizeInBytes = numBytes;
   purgeCacheIfNecessary();
 }
+=======
+var _index = __webpack_require__(36);
+>>>>>>> master:dist/cornerstone.js
 
 function putImageTexture(image, imageTexture) {
   var imageId = image.imageId;
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   if (image === undefined) {
     throw new Error('putImageTexture: image must not be undefined');
   }
+=======
+var _renderColorImage = __webpack_require__(6);
+>>>>>>> master:dist/cornerstone.js
 
   if (imageId === undefined) {
     throw new Error('putImageTexture: imageId must not be undefined');
   }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   if (imageTexture === undefined) {
     throw new Error('putImageTexture: imageTexture must not be undefined');
   }
+=======
+var _renderGrayscaleImage = __webpack_require__(12);
+>>>>>>> master:dist/cornerstone.js
 
   if (Object.prototype.hasOwnProperty.call(imageCache, imageId) === true) {
     throw new Error('putImageTexture: imageId already in cache');
   }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   var cachedImage = {
     imageId: imageId,
     imageTexture: imageTexture,
     timeStamp: new Date(),
     sizeInBytes: imageTexture.sizeInBytes
   };
+=======
+var _renderWebImage = __webpack_require__(23);
+>>>>>>> master:dist/cornerstone.js
 
   imageCache[imageId] = cachedImage;
   cachedImages.push(cachedImage);
@@ -3654,27 +4680,39 @@ function putImageTexture(image, imageTexture) {
   purgeCacheIfNecessary();
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 function getImageTexture(imageId) {
   if (imageId === undefined) {
     throw new Error('getImageTexture: imageId must not be undefined');
   }
   var cachedImage = imageCache[imageId];
+=======
+var _canvasToPixel = __webpack_require__(47);
+>>>>>>> master:dist/cornerstone.js
 
   if (cachedImage === undefined) {
     return;
   }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   // Bump time stamp for cached image
   cachedImage.timeStamp = new Date();
+=======
+var _disable = __webpack_require__(48);
+>>>>>>> master:dist/cornerstone.js
 
   return cachedImage.imageTexture;
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 function removeImageTexture(imageId) {
   if (imageId === undefined) {
     throw new Error('removeImageTexture: imageId must not be undefined');
   }
   var cachedImage = imageCache[imageId];
+=======
+var _displayImage = __webpack_require__(49);
+>>>>>>> master:dist/cornerstone.js
 
   if (cachedImage === undefined) {
     throw new Error('removeImageTexture: imageId must not be undefined');
@@ -3727,7 +4765,11 @@ var _enabledElements = __webpack_require__(0);
 
 var _getTransform = __webpack_require__(11);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _getTransform2 = _interopRequireDefault(_getTransform);
+=======
+var _layers = __webpack_require__(18);
+>>>>>>> master:dist/cornerstone.js
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3735,7 +4777,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 "use strict";
+=======
+var _fitToWindow = __webpack_require__(26);
+>>>>>>> master:dist/cornerstone.js
 
 
 Object.defineProperty(exports, "__esModule", {
@@ -3761,9 +4807,13 @@ exports.default = function (element) {
 
       $(element).trigger('CornerstoneElementDisabled', eventData);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
       // Remove the child DOM elements that we created (e.g.canvas)
       enabledElements[i].element.removeChild(enabledElements[i].canvas);
       enabledElements[i].canvas = undefined;
+=======
+var _getStoredPixels = __webpack_require__(32);
+>>>>>>> master:dist/cornerstone.js
 
       // Remove this element from the list of enabled elements
       enabledElements.splice(i, 1);
@@ -3842,11 +4892,19 @@ exports.default = function (element, image, viewport) {
   (0, _updateImage2.default)(element);
 };
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _enabledElements = __webpack_require__(0);
+=======
+var _resize = __webpack_require__(25);
+>>>>>>> master:dist/cornerstone.js
 
 var _getDefaultViewport = __webpack_require__(3);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _getDefaultViewport2 = _interopRequireDefault(_getDefaultViewport);
+=======
+var _setToPixelCoordinateSystem = __webpack_require__(7);
+>>>>>>> master:dist/cornerstone.js
 
 var _updateImage = __webpack_require__(1);
 
@@ -3854,11 +4912,19 @@ var _updateImage2 = _interopRequireDefault(_updateImage);
 
 var _now = __webpack_require__(4);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _now2 = _interopRequireDefault(_now);
+=======
+var _updateImage = __webpack_require__(2);
+>>>>>>> master:dist/cornerstone.js
 
 var _layers = __webpack_require__(16);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+=======
+var _pixelDataToFalseColorData = __webpack_require__(28);
+>>>>>>> master:dist/cornerstone.js
 
 /***/ }),
 /* 36 */
@@ -3871,40 +4937,64 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 exports.default = function (element) {
   var enabledElement = (0, _enabledElements.getEnabledElement)(element);
+=======
+var _imageCache = __webpack_require__(33);
+>>>>>>> master:dist/cornerstone.js
 
   if (enabledElement.image === undefined) {
     throw new Error('draw: image has not been loaded yet');
   }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   (0, _drawImage2.default)(enabledElement);
 };
+=======
+var _metaData = __webpack_require__(24);
+>>>>>>> master:dist/cornerstone.js
 
 var _enabledElements = __webpack_require__(0);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _drawImage = __webpack_require__(2);
+=======
+var _index3 = __webpack_require__(10);
+>>>>>>> master:dist/cornerstone.js
 
 var _drawImage2 = _interopRequireDefault(_drawImage);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+=======
+var _index4 = __webpack_require__(29);
+>>>>>>> master:dist/cornerstone.js
 
 /***/ }),
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 "use strict";
+=======
+var _falseColorMapping = __webpack_require__(27);
+>>>>>>> master:dist/cornerstone.js
 
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 exports.default = function () {
   var enabledElements = (0, _enabledElements.getEnabledElements)();
 
   for (var i = 0; i < enabledElements.length; i++) {
     var ee = enabledElements[i];
+=======
+var _events = __webpack_require__(11);
+>>>>>>> master:dist/cornerstone.js
 
     if (ee.invalid === true) {
       (0, _drawImage2.default)(ee, true);
@@ -3921,7 +5011,11 @@ var _drawImage2 = _interopRequireDefault(_drawImage);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 38 */
+=======
+/* 35 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3954,6 +5048,7 @@ exports.default = function (element, options) {
 
   var canvas = document.createElement('canvas');
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   element.appendChild(canvas);
 
   var enabledElement = {
@@ -3966,9 +5061,46 @@ exports.default = function (element, options) {
     layers: [],
     data: {},
     renderingTools: {}
+=======
+/**
+ * Volume of Interest Lookup Table Function
+ *
+ * @typedef {Function} VOILUTFunction
+ *
+ * @param {Number} modalityLutValue
+ * @returns {Number} transformed value
+ */
+
+/**
+ *
+ * @param {Number} windowWidth Window Width
+ * @param {Number} windowCenter Window Center
+ * @returns {VOILUTFunction} VOI LUT mapping function
+ */
+function generateLinearVOILUT(windowWidth, windowCenter) {
+  return function (modalityLutValue) {
+    return ((modalityLutValue - windowCenter) / windowWidth + 0.5) * 255.0;
+>>>>>>> master:dist/cornerstone.js
   };
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   (0, _enabledElements.addEnabledElement)(enabledElement);
+=======
+/**
+ * Generate a non-linear volume of interest lookup table
+ *
+ * @param {LUT} voiLUT Volume of Interest Lookup Table Object
+ *
+ * @returns {VOILUTFunction} VOI LUT mapping function
+ */
+function generateNonLinearVOILUT(voiLUT) {
+  // We don't trust the voiLUT.numBitsPerEntry, mainly thanks to Agfa!
+  var bitsPerEntry = Math.max.apply(Math, _toConsumableArray(voiLUT.lut)).toString(2).length;
+  var shift = bitsPerEntry - 8;
+  var minValue = voiLUT.lut[0] >> shift;
+  var maxValue = voiLUT.lut[voiLUT.lut.length - 1] >> shift;
+  var maxValueMapped = voiLUT.firstValueMapped + voiLUT.lut.length - 1;
+>>>>>>> master:dist/cornerstone.js
 
   (0, _resize2.default)(element, true);
 
@@ -4023,6 +5155,7 @@ function hasImageOrLayers(enabledElement) {
 }
 
 /**
+<<<<<<< HEAD:dist/cornerstone-core.js
  * Enable an HTML Element for use in Cornerstone
  *
  * @param {HTMLElement} element An HTML Element enabled for Cornerstone
@@ -4036,6 +5169,20 @@ function hasImageOrLayers(enabledElement) {
 
 /***/ }),
 /* 39 */
+=======
+ * Retrieve a VOI LUT mapping function given the current windowing settings
+ * and the VOI LUT for the image
+ *
+ * @param {Number} windowWidth Window Width
+ * @param {Number} windowCenter Window Center
+ * @param {LUT} voiLUT Volume of Interest Lookup Table Object
+ *
+ * @return {VOILUTFunction} VOI LUT mapping function
+ */
+
+/***/ }),
+/* 36 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4047,7 +5194,19 @@ Object.defineProperty(exports, "__esModule", {
 exports.getElementData = getElementData;
 exports.removeElementData = removeElementData;
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _enabledElements = __webpack_require__(0);
+=======
+var _drawImage = __webpack_require__(3);
+
+var _drawImage2 = _interopRequireDefault(_drawImage);
+
+var _generateLut = __webpack_require__(8);
+
+var _generateLut2 = _interopRequireDefault(_generateLut);
+
+var _generateLutNew = __webpack_require__(13);
+>>>>>>> master:dist/cornerstone.js
 
 /**
  * Retrieves any data for a Cornerstone enabledElement for a specific string
@@ -4060,13 +5219,18 @@ var _enabledElements = __webpack_require__(0);
 function getElementData(element, dataType) {
   var ee = (0, _enabledElements.getEnabledElement)(element);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   if (ee.data.hasOwnProperty(dataType) === false) {
     ee.data[dataType] = {};
   }
+=======
+var _getDefaultViewport = __webpack_require__(4);
+>>>>>>> master:dist/cornerstone.js
 
   return ee.data[dataType];
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 /**
  * Clears any data for a Cornerstone enabledElement for a specific string
  * dataType
@@ -4078,37 +5242,64 @@ function getElementData(element, dataType) {
  */
 function removeElementData(element, dataType) {
   var ee = (0, _enabledElements.getEnabledElement)(element);
+=======
+var _requestAnimationFrame = __webpack_require__(14);
+>>>>>>> master:dist/cornerstone.js
 
   delete ee.data[dataType];
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 /***/ }),
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
+=======
+var _storedPixelDataToCanvasImageData = __webpack_require__(15);
+>>>>>>> master:dist/cornerstone.js
 
 "use strict";
 
+<<<<<<< HEAD:dist/cornerstone-core.js
+=======
+var _storedColorPixelDataToCanvasImageData = __webpack_require__(16);
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 exports.default = function (element, image) {
   var enabledElement = (0, _enabledElements.getEnabledElement)(element);
+=======
+var _getTransform = __webpack_require__(9);
+>>>>>>> master:dist/cornerstone.js
 
   return (0, _getDefaultViewport2.default)(enabledElement.canvas, image);
 };
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _enabledElements = __webpack_require__(0);
+=======
+var _calculateTransform = __webpack_require__(17);
+>>>>>>> master:dist/cornerstone.js
 
 var _getDefaultViewport = __webpack_require__(3);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _getDefaultViewport2 = _interopRequireDefault(_getDefaultViewport);
+=======
+var _transform = __webpack_require__(20);
+>>>>>>> master:dist/cornerstone.js
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 41 */
+=======
+/* 37 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4124,10 +5315,21 @@ exports.default = function (element) {
   return enabledElement.image;
 };
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _enabledElements = __webpack_require__(0);
 
 /***/ }),
 /* 42 */
+=======
+var _now = __webpack_require__(5);
+
+var _now2 = _interopRequireDefault(_now);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 38 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4137,6 +5339,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 exports.default = function (element, x, y, width, height) {
   var storedPixels = (0, _getStoredPixels2.default)(element, x, y, width, height);
   var ee = (0, _enabledElements.getEnabledElement)(element);
@@ -4148,10 +5351,21 @@ exports.default = function (element, x, y, width, height) {
 var _enabledElements = __webpack_require__(0);
 
 var _getStoredPixels = __webpack_require__(21);
+=======
+var _index = __webpack_require__(39);
+
+var _vertexShader = __webpack_require__(45);
+
+var _textureCache = __webpack_require__(21);
+>>>>>>> master:dist/cornerstone.js
 
 var _getStoredPixels2 = _interopRequireDefault(_getStoredPixels);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _getModalityLUT = __webpack_require__(29);
+=======
+var _createProgramFromString = __webpack_require__(22);
+>>>>>>> master:dist/cornerstone.js
 
 var _getModalityLUT2 = _interopRequireDefault(_getModalityLUT);
 
@@ -4436,7 +5650,11 @@ exports.default = function (element) {
 var _enabledElements = __webpack_require__(0);
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 47 */
+=======
+/* 39 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4446,6 +5664,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 exports.default = function (imageId) {
 
   var enabledElements = (0, _enabledElements.getEnabledElementsByImageId)(imageId);
@@ -4456,6 +5675,17 @@ exports.default = function (imageId) {
 };
 
 var _enabledElements = __webpack_require__(0);
+=======
+var _int = __webpack_require__(40);
+
+var _int2 = __webpack_require__(41);
+
+var _rgb = __webpack_require__(42);
+
+var _uint = __webpack_require__(43);
+
+var _uint2 = __webpack_require__(44);
+>>>>>>> master:dist/cornerstone.js
 
 var _drawImage = __webpack_require__(2);
 
@@ -4464,15 +5694,20 @@ var _drawImage2 = _interopRequireDefault(_drawImage);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 48 */
+=======
+/* 40 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
+<<<<<<< HEAD:dist/cornerstone-core.js
 
 exports.default = function (element, pageX, pageY) {
   var enabledElement = (0, _enabledElements.getEnabledElement)(element);
@@ -4485,6 +5720,45 @@ exports.default = function (element, pageX, pageY) {
   var rect = element.getBoundingClientRect();
   var clientX = pageX - rect.left - window.pageXOffset;
   var clientY = pageY - rect.top - window.pageYOffset;
+=======
+/* eslint no-bitwise: 0 */
+
+var int16Shader = {};
+
+/**
+ * Convert stored pixel data to image data.
+ *
+ * Pack int16 into three uint8 channels (r, g, b)
+ *
+ * @param {Image} image A Cornerstone Image Object
+ * @returns {Uint8Array} The image data for use by the WebGL shader
+ */
+function storedPixelDataToImageData(image) {
+
+    // Transfer image data to alpha and luminance channels of WebGL texture
+    // Credit to @jpambrun and @fernandojsg
+
+    // Pack int16 into three uint8 channels (r, g, b)
+    var pixelData = image.getPixelData();
+    var numberOfChannels = 3;
+    var data = new Uint8Array(image.width * image.height * numberOfChannels);
+    var offset = 0;
+
+    for (var i = 0; i < pixelData.length; i++) {
+        var val = Math.abs(pixelData[i]);
+
+        data[offset++] = parseInt(val & 0xFF, 10);
+        data[offset++] = parseInt(val >> 8, 10);
+        data[offset++] = pixelData[i] < 0 ? 0 : 1; // 0 For negative, 1 for positive
+    }
+
+    return data;
+}
+
+var int16DataUtilities = exports.int16DataUtilities = {
+    storedPixelDataToImageData: storedPixelDataToImageData
+};
+>>>>>>> master:dist/cornerstone.js
 
   var pt = { x: clientX,
     y: clientY };
@@ -4504,16 +5778,25 @@ var _getTransform2 = _interopRequireDefault(_getTransform);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 49 */
+=======
+/* 41 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
+<<<<<<< HEAD:dist/cornerstone-core.js
   value: true
+=======
+    value: true
+>>>>>>> master:dist/cornerstone.js
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 exports.default = function (element, pt) {
   var enabledElement = (0, _enabledElements.getEnabledElement)(element);
   var transform = (0, _getTransform2.default)(enabledElement);
@@ -4524,6 +5807,35 @@ exports.default = function (element, pt) {
 var _enabledElements = __webpack_require__(0);
 
 var _getTransform = __webpack_require__(11);
+=======
+/**
+ * Convert stored pixel data to image data.
+ *
+ * Store data in Uint8Array
+ *
+ * @param {Image} image A Cornerstone Image Object
+ * @returns {Uint8Array} The image data for use by the WebGL shader
+ */
+function storedPixelDataToImageData(image) {
+    // Transfer image data to alpha channel of WebGL texture
+    // Store data in Uint8Array
+    var pixelData = image.getPixelData();
+    var numberOfChannels = 2;
+    var data = new Uint8Array(image.width * image.height * numberOfChannels);
+    var offset = 0;
+
+    for (var i = 0; i < pixelData.length; i++) {
+        data[offset++] = parseInt(pixelData[i], 10);
+        data[offset++] = pixelData[i] < 0 ? 0 : 1; // 0 For negative, 1 for positive
+    }
+
+    return data;
+}
+
+var int8DataUtilities = exports.int8DataUtilities = {
+    storedPixelDataToImageData: storedPixelDataToImageData
+};
+>>>>>>> master:dist/cornerstone.js
 
 var _getTransform2 = _interopRequireDefault(_getTransform);
 
@@ -4553,7 +5865,11 @@ exports.default = {
 };
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 51 */
+=======
+/* 42 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4562,6 +5878,46 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+<<<<<<< HEAD:dist/cornerstone-core.js
+=======
+var rgbShader = {};
+
+/**
+ * Convert stored pixel data to image data.
+ *
+ * Pack RGB images into a 3-channel RGB texture
+ *
+ * @param {Image} image A Cornerstone Image Object
+ * @returns {Uint8Array} The image data for use by the WebGL shader
+ */
+function storedPixelDataToImageData(image) {
+  var minPixelValue = image.minPixelValue;
+  var canvasImageDataIndex = 0;
+  var storedPixelDataIndex = 0;
+  // Only 3 channels, since we use WebGL's RGB texture format
+  var numStoredPixels = image.width * image.height * 4;
+  var numOutputPixels = image.width * image.height * 3;
+  var storedPixelData = image.getPixelData();
+  var data = new Uint8Array(numOutputPixels);
+
+  // NOTE: As of Nov 2014, most javascript engines have lower performance when indexing negative indexes.
+  // We have a special code path for this case that improves performance.  Thanks to @jpambrun for this enhancement
+  if (minPixelValue < 0) {
+    while (storedPixelDataIndex < numStoredPixels) {
+      data[canvasImageDataIndex++] = storedPixelData[storedPixelDataIndex++] + -minPixelValue; // Red
+      data[canvasImageDataIndex++] = storedPixelData[storedPixelDataIndex++] + -minPixelValue; // Green
+      data[canvasImageDataIndex++] = storedPixelData[storedPixelDataIndex++] + -minPixelValue; // Blue
+      storedPixelDataIndex += 1; // The stored pixel data has 4 channels
+    }
+  } else {
+    while (storedPixelDataIndex < numStoredPixels) {
+      data[canvasImageDataIndex++] = storedPixelData[storedPixelDataIndex++]; // Red
+      data[canvasImageDataIndex++] = storedPixelData[storedPixelDataIndex++]; // Green
+      data[canvasImageDataIndex++] = storedPixelData[storedPixelDataIndex++]; // Blue
+      storedPixelDataIndex += 1; // The stored pixel data has 4 channels
+    }
+  }
+>>>>>>> master:dist/cornerstone.js
 
 exports.default = function (element) {
   var enabledElement = (0, _enabledElements.getEnabledElement)(element);
@@ -4583,7 +5939,11 @@ var _updateImage2 = _interopRequireDefault(_updateImage);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 52 */
+=======
+/* 43 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4593,7 +5953,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 exports.default = function (element, viewport) {
+=======
+/**
+ * Convert stored pixel data to image data.
+ *
+ * For uint16 pack uint16 into two uint8 channels (r and a).
+ *
+ * @param {Image} image A Cornerstone Image Object
+ * @returns {Uint8Array} The image data for use by the WebGL shader
+ */
+function storedPixelDataToImageData(image) {
+>>>>>>> master:dist/cornerstone.js
 
   var enabledElement = (0, _enabledElements.getEnabledElement)(element);
 
@@ -4651,16 +6023,25 @@ var MIN_VIEWPORT_SCALE = 0.0001;
  */
 
 /***/ }),
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* 53 */
+=======
+/* 44 */
+>>>>>>> master:dist/cornerstone.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
+<<<<<<< HEAD:dist/cornerstone-core.js
   value: true
+=======
+    value: true
+>>>>>>> master:dist/cornerstone.js
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _drawImage = __webpack_require__(2);
 
 Object.defineProperty(exports, 'drawImage', {
@@ -4678,6 +6059,31 @@ Object.defineProperty(exports, 'generateLut', {
     return _interopRequireDefault(_generateLut).default;
   }
 });
+=======
+/**
+ * Convert stored pixel data to image data. Here we will store
+ * all data in the alpha channel.
+ *
+ * @param {Image} image A Cornerstone Image Object
+ * @returns {Uint8Array} The image data for use by the WebGL shader
+ */
+function storedPixelDataToImageData(image) {
+    // Transfer image data to alpha channel of WebGL texture
+    // Store data in Uint8Array
+    var pixelData = image.getPixelData();
+    var data = new Uint8Array(pixelData.length);
+
+    for (var i = 0; i < pixelData.length; i++) {
+        data[i] = parseInt(pixelData[i], 10);
+    }
+
+    return data;
+}
+
+var uint8DataUtilities = exports.uint8DataUtilities = {
+    storedPixelDataToImageData: storedPixelDataToImageData
+};
+>>>>>>> master:dist/cornerstone.js
 
 var _generateLutNew = __webpack_require__(12);
 
@@ -4708,12 +6114,18 @@ Object.defineProperty(exports, 'requestAnimationFrame', {
 
 var _storedPixelDataToCanvasImageData = __webpack_require__(15);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 Object.defineProperty(exports, 'storedPixelDataToCanvasImageData', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_storedPixelDataToCanvasImageData).default;
   }
 });
+=======
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> master:dist/cornerstone.js
 
 var _storedColorPixelDataToCanvasImageData = __webpack_require__(14);
 
@@ -4733,7 +6145,19 @@ Object.defineProperty(exports, 'internal', {
   }
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _renderColorImage = __webpack_require__(5);
+=======
+/***/ }),
+/* 46 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_46__;
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'renderColorImage', {
   enumerable: true,
@@ -4769,7 +6193,11 @@ Object.defineProperty(exports, 'canvasToPixel', {
   }
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _disable = __webpack_require__(34);
+=======
+var _getTransform = __webpack_require__(9);
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'disable', {
   enumerable: true,
@@ -4780,12 +6208,18 @@ Object.defineProperty(exports, 'disable', {
 
 var _displayImage = __webpack_require__(35);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 Object.defineProperty(exports, 'displayImage', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_displayImage).default;
   }
 });
+=======
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> master:dist/cornerstone.js
 
 var _draw = __webpack_require__(36);
 
@@ -4901,7 +6335,11 @@ Object.defineProperty(exports, 'getActiveLayer', {
   }
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _fitToWindow = __webpack_require__(20);
+=======
+      (0, _jquery2.default)(element).trigger('CornerstoneElementDisabled', eventData);
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'fitToWindow', {
   enumerable: true,
@@ -4917,9 +6355,25 @@ Object.defineProperty(exports, 'getDefaultViewportForImage', {
   get: function get() {
     return _interopRequireDefault(_getDefaultViewportForImage).default;
   }
+<<<<<<< HEAD:dist/cornerstone-core.js
 });
 
 var _getImage = __webpack_require__(41);
+=======
+};
+
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _enabledElements = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'getImage', {
   enumerable: true,
@@ -4984,15 +6438,20 @@ Object.defineProperty(exports, 'registerUnknownImageLoader', {
 
 var _invalidate = __webpack_require__(46);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 Object.defineProperty(exports, 'invalidate', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_invalidate).default;
   }
 });
+=======
+  (0, _jquery2.default)(enabledElement.element).trigger('CornerstoneNewImage', newImageEventData);
+>>>>>>> master:dist/cornerstone.js
 
 var _invalidateImageId = __webpack_require__(47);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 Object.defineProperty(exports, 'invalidateImageId', {
   enumerable: true,
   get: function get() {
@@ -5001,6 +6460,15 @@ Object.defineProperty(exports, 'invalidateImageId', {
 });
 
 var _pageToPixel = __webpack_require__(48);
+=======
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _enabledElements = __webpack_require__(0);
+
+var _getDefaultViewport = __webpack_require__(4);
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'pageToPixel', {
   enumerable: true,
@@ -5009,7 +6477,11 @@ Object.defineProperty(exports, 'pageToPixel', {
   }
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _pixelToCanvas = __webpack_require__(49);
+=======
+var _updateImage = __webpack_require__(2);
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'pixelToCanvas', {
   enumerable: true,
@@ -5018,7 +6490,11 @@ Object.defineProperty(exports, 'pixelToCanvas', {
   }
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _reset = __webpack_require__(51);
+=======
+var _now = __webpack_require__(5);
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'reset', {
   enumerable: true,
@@ -5027,7 +6503,11 @@ Object.defineProperty(exports, 'reset', {
   }
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _resize = __webpack_require__(26);
+=======
+var _layers = __webpack_require__(18);
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'resize', {
   enumerable: true,
@@ -5036,7 +6516,13 @@ Object.defineProperty(exports, 'resize', {
   }
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _setToPixelCoordinateSystem = __webpack_require__(6);
+=======
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'setToPixelCoordinateSystem', {
   enumerable: true,
@@ -5065,6 +6551,7 @@ Object.defineProperty(exports, 'updateImage', {
 
 var _pixelDataToFalseColorData = __webpack_require__(24);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 Object.defineProperty(exports, 'pixelDataToFalseColorData', {
   enumerable: true,
   get: function get() {
@@ -5091,6 +6578,11 @@ Object.defineProperty(exports, 'imageCache', {
 });
 
 var _metaData = __webpack_require__(23);
+=======
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'metaData', {
   enumerable: true,
@@ -5138,7 +6630,11 @@ Object.defineProperty(exports, 'restoreImage', {
   }
 });
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _events = __webpack_require__(7);
+=======
+var _drawImage = __webpack_require__(3);
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, 'events', {
   enumerable: true,
@@ -5178,6 +6674,14 @@ exports.default = function (enabledElement, invalidated) {
       syncedViewports[layer.layerId] = cloneViewport(layer.viewport);
     });
   }
+<<<<<<< HEAD:dist/cornerstone-core.js
+=======
+};
+
+var _enabledElements = __webpack_require__(0);
+
+var _drawImage = __webpack_require__(3);
+>>>>>>> master:dist/cornerstone.js
 
   // Sync all viewports in case it's activated
   if (enabledElement.syncViewports === true) {
@@ -5226,6 +6730,7 @@ function cloneViewport(viewport) {
   };
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 // Sync all viewports based on active layer's viewport
 function syncViewports(layers, activeLayer) {
   // If we intend to keep the viewport's scale, translation and rotation in sync,
@@ -5234,6 +6739,15 @@ function syncViewports(layers, activeLayer) {
     // Don't do anything to the active layer
     if (layer === activeLayer) {
       return;
+=======
+    (0, _jquery2.default)(enabledElement.element).trigger('CornerstonePreRender', {
+      enabledElement: enabledElement,
+      timestamp: timestamp
+    });
+
+    if (enabledElement.needsRedraw && hasImageOrLayers(enabledElement)) {
+      (0, _drawImageSync2.default)(enabledElement, enabledElement.invalid);
+>>>>>>> master:dist/cornerstone.js
     }
 
     var activeLayerSyncedViewport = syncedViewports[activeLayer.layerId];
@@ -5251,6 +6765,7 @@ function syncViewports(layers, activeLayer) {
   });
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 /**
  * Internal function to render all layers for a Cornerstone enabled element
  *
@@ -5266,6 +6781,15 @@ function renderLayers(context, activeLayer, layers, invalidated) {
   // Loop through each layer and draw it to the canvas
   layers.forEach(function (layer) {
     context.save();
+=======
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _enabledElements = __webpack_require__(0);
+
+var _resize = __webpack_require__(25);
+>>>>>>> master:dist/cornerstone.js
 
     // Set the layer's canvas to the pixel coordinate system
     layer.canvas = canvas;
@@ -5281,8 +6805,12 @@ function renderLayers(context, activeLayer, layers, invalidated) {
       pixelDataUpdated = (0, _falseColorMapping.restoreImage)(layer.image);
     }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
     // If the image got updated it needs to be re-rendered
     invalidated = invalidated || pixelDataUpdated;
+=======
+var _requestAnimationFrame = __webpack_require__(14);
+>>>>>>> master:dist/cornerstone.js
 
     // Render into the layer's canvas
     if (layer.image.color === true) {
@@ -5291,12 +6819,16 @@ function renderLayers(context, activeLayer, layers, invalidated) {
       (0, _renderGrayscaleImage.addGrayscaleLayer)(layer, invalidated);
     }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
     // Apply any global opacity settings that have been defined for this layer
     if (layer.options && layer.options.opacity) {
       context.globalAlpha = layer.options.opacity;
     } else {
       context.globalAlpha = 1;
     }
+=======
+var _index = __webpack_require__(10);
+>>>>>>> master:dist/cornerstone.js
 
     if (layer.options && layer.options.fillStyle) {
       context.fillStyle = layer.options.fillStyle;
@@ -5305,6 +6837,7 @@ function renderLayers(context, activeLayer, layers, invalidated) {
     // Draw from the current layer's canvas onto the enabled element's canvas
     context.drawImage(layer.canvas, 0, 0, layer.image.width, layer.image.height, 0, 0, layer.image.width, layer.image.height);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
     context.restore();
   });
 }
@@ -5315,6 +6848,23 @@ function renderLayers(context, activeLayer, layers, invalidated) {
  * @param {EnabledElement} enabledElement An enabled element to draw into
  * @param {Boolean} invalidated - true if pixel data has been invalidated and cached rendering should not be used
  * @returns {void}
+=======
+/**
+ * This module is responsible for enabling an element to display images with cornerstone
+ */
+
+function hasImageOrLayers(enabledElement) {
+  return enabledElement.image !== undefined || enabledElement.layers.length;
+}
+
+/**
+ * Enable an HTML Element for use in Cornerstone
+ *
+ * @param {HTMLElement} element An HTML Element enabled for Cornerstone
+ * @param {Object} options Options for the enabledElement
+ *
+ * @return {void}
+>>>>>>> master:dist/cornerstone.js
  */
 
 /***/ }),
@@ -5378,10 +6928,14 @@ exports.default = function (enabledElement, invalidated) {
   enabledElement.invalid = false;
   enabledElement.needsRedraw = false;
 
-  $(element).trigger('CornerstoneImageRendered', eventData);
+  (0, _jquery2.default)(element).trigger('CornerstoneImageRendered', eventData);
 };
 
-var _now = __webpack_require__(4);
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _now = __webpack_require__(5);
 
 var _now2 = _interopRequireDefault(_now);
 
@@ -5389,9 +6943,13 @@ var _drawCompositeImage = __webpack_require__(54);
 
 var _drawCompositeImage2 = _interopRequireDefault(_drawCompositeImage);
 
-var _renderColorImage = __webpack_require__(5);
+var _renderColorImage = __webpack_require__(6);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _renderGrayscaleImage = __webpack_require__(9);
+=======
+var _renderGrayscaleImage = __webpack_require__(12);
+>>>>>>> master:dist/cornerstone.js
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5539,6 +7097,7 @@ exports.default = function (image, lut, canvasImageDataData) {
   image.stats.lastStoredPixelDataToCanvasImageDataTime = (0, _now2.default)() - start;
 };
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var _now = __webpack_require__(4);
 
 var _now2 = _interopRequireDefault(_now);
@@ -5551,6 +7110,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 "use strict";
 
+=======
+var _layers = __webpack_require__(18);
+
+var _renderColorImage = __webpack_require__(6);
+
+var _renderGrayscaleImage = __webpack_require__(12);
+
+var _falseColorMapping = __webpack_require__(27);
+
+var _setToPixelCoordinateSystem = __webpack_require__(7);
+>>>>>>> master:dist/cornerstone.js
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -5649,17 +7219,41 @@ function initWebGL(canvas) {
       preserveDrawingBuffer: true // Preserve buffer so we can copy to display canvas element
     };
 
+<<<<<<< HEAD:dist/cornerstone-core.js
     // ---------------- Testing purposes -------------
     // If (debug === true && WebGLDebugUtils) {
     //    RenderCanvas = WebGLDebugUtils.makeLostContextSimulatingCanvas(renderCanvas);
     // }
     // ---------------- Testing purposes -------------
+=======
+/**
+ * Internal function to render all layers for a Cornerstone enabled element
+ *
+ * @param {CanvasRenderingContext2D} context Canvas context to draw upon
+ * @param {EnabledElementLayer} activeLayer The active layer
+ * @param {EnabledElementLayer[]} layers The array of all layers for this enabled element
+ * @param {Boolean} invalidated A boolean whether or not this image has been invalidated and must be redrawn
+ * @returns {void}
+ */
+function renderLayers(context, activeLayer, layers, invalidated) {
+  var canvas = context.canvas;
+>>>>>>> master:dist/cornerstone.js
 
     gl = canvas.getContext('webgl', options) || canvas.getContext('experimental-webgl', options);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
     // Set up event listeners for context lost / context restored
     canvas.removeEventListener('webglcontextlost', handleLostContext, false);
     canvas.addEventListener('webglcontextlost', handleLostContext, false);
+=======
+    if (!layer.image) {
+      return;
+    }
+
+    // Set the layer's canvas to the pixel coordinate system
+    layer.canvas = canvas;
+    (0, _setToPixelCoordinateSystem2.default)(layer, context);
+>>>>>>> master:dist/cornerstone.js
 
     canvas.removeEventListener('webglcontextrestored', handleRestoredContext, false);
     canvas.addEventListener('webglcontextrestored', handleRestoredContext, false);
@@ -5667,11 +7261,34 @@ function initWebGL(canvas) {
     throw new Error('Error creating WebGL context');
   }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   // If we don't have a GL context, give up now
   if (!gl) {
     console.error('Unable to initialize WebGL. Your browser may not support it.');
     gl = null;
   }
+=======
+    if (layer.options.colormap && layer.image.colormapId !== layer.options.colormap) {
+      // If the options for this layer specify a colormap, but the image
+      // in the layer does not yet have this colormap set, convert
+      // the pixel data to this colormap and update the viewport.
+      pixelDataUpdated = (0, _falseColorMapping.convertImageToFalseColorImage)(layer.image, layer.options.colormap);
+      layer.viewport.voi = {
+        windowWidth: layer.image.windowWidth,
+        windowCenter: layer.image.windowCenter
+      };
+    } else if (!layer.options.colormap && layer.image.colormapId) {
+      // If the image for this layer still has a colormapId, but the
+      // colormap has been removed from the options for this layer,
+      // undo the conversion from the original pixel data to the false
+      // color mapped pixel data and update the viewport.
+      pixelDataUpdated = (0, _falseColorMapping.restoreImage)(layer.image);
+      layer.viewport.voi = {
+        windowWidth: layer.image.windowWidth,
+        windowCenter: layer.image.windowCenter
+      };
+    }
+>>>>>>> master:dist/cornerstone.js
 
   return gl;
 }
@@ -5687,16 +7304,41 @@ function getImageDataType(image) {
     datatype = 'u' + datatype;
   }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   if (image.maxPixelValue > 255) {
     datatype += '16';
   } else {
     datatype += '8';
   }
+=======
+    // Set the pixelReplication property before drawing from the layer into the
+    // composite canvas
+    if (layer.viewport.pixelReplication === true) {
+      context.imageSmoothingEnabled = false;
+      context.mozImageSmoothingEnabled = false;
+    } else {
+      context.imageSmoothingEnabled = true;
+      context.mozImageSmoothingEnabled = true;
+    }
+
+    // Draw from the current layer's canvas onto the enabled element's canvas
+    context.drawImage(layer.canvas, 0, 0, layer.image.width, layer.image.height, 0, 0, layer.image.width, layer.image.height);
+>>>>>>> master:dist/cornerstone.js
 
   return datatype;
 }
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 function getShaderProgram(image) {
+=======
+/**
+ * Internal API function to draw a composite image to a given enabled element
+ *
+ * @param {EnabledElement} enabledElement An enabled element to draw into
+ * @param {Boolean} invalidated - true if pixel data has been invalidated and cached rendering should not be used
+ * @returns {void}
+ */
+>>>>>>> master:dist/cornerstone.js
 
   var datatype = getImageDataType(image);
   // We need a mechanism for
@@ -5726,19 +7368,46 @@ function generateTexture(image) {
     rgb: 3 // RGB
   };
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   var imageDataType = getImageDataType(image);
   var format = TEXTURE_FORMAT[imageDataType];
+=======
+/**
+ * Retrieves any data for a Cornerstone enabledElement for a specific string
+ * dataType
+ *
+ * @param {HTMLElement} element An HTML Element enabled for Cornerstone
+ * @param {string} dataType A string name for an arbitrary set of data
+ * @returns {*} Whatever data is stored for this enabled element
+ */
+function getElementData(element, dataType) {
+  var ee = (0, _enabledElements.getEnabledElement)(element);
+>>>>>>> master:dist/cornerstone.js
 
   // GL texture configuration
   var texture = gl.createTexture();
 
   gl.bindTexture(gl.TEXTURE_2D, texture);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
   gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1);
+=======
+/**
+ * Clears any data for a Cornerstone enabledElement for a specific string
+ * dataType
+ *
+ * @param {HTMLElement} element An HTML Element enabled for Cornerstone
+ * @param {string} dataType A string name for an arbitrary set of data
+ *
+ * @returns {void}
+ */
+function removeElementData(element, dataType) {
+  var ee = (0, _enabledElements.getEnabledElement)(element);
+>>>>>>> master:dist/cornerstone.js
 
   var imageData = _index.dataUtilities[imageDataType].storedPixelDataToImageData(image, image.width, image.height);
 
@@ -5771,10 +7440,14 @@ function initBuffers() {
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([1, 1, 0, 1, 1, 0, 0, 0]), gl.STATIC_DRAW);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   texCoordBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0]), gl.STATIC_DRAW);
 }
+=======
+var _getDefaultViewport = __webpack_require__(4);
+>>>>>>> master:dist/cornerstone.js
 
 function renderQuad(shader, parameters, texture, width, height) {
   gl.clearColor(1.0, 0.0, 0.0, 1.0);
@@ -5852,16 +7525,24 @@ function render(enabledElement) {
 
   renderQuad(shader, parameters, texture, image.width, image.height);
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   return renderCanvas;
 }
+=======
+var _getStoredPixels = __webpack_require__(32);
+>>>>>>> master:dist/cornerstone.js
 
 function isWebGLAvailable() {
   // Adapted from
   // http://stackoverflow.com/questions/9899807/three-js-detect-webgl-support-and-fallback-to-regular-canvas
 
+<<<<<<< HEAD:dist/cornerstone-core.js
   var options = {
     failIfMajorPerformanceCaveat: true
   };
+=======
+var _getModalityLUT = __webpack_require__(19);
+>>>>>>> master:dist/cornerstone.js
 
   try {
     var canvas = document.createElement('canvas');
@@ -5923,7 +7604,30 @@ exports.dataUtilities = dataUtilities;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+<<<<<<< HEAD:dist/cornerstone-core.js
 /* eslint no-bitwise: 0 */
+=======
+exports.loadImage = loadImage;
+exports.loadAndCacheImage = loadAndCacheImage;
+exports.registerImageLoader = registerImageLoader;
+exports.registerUnknownImageLoader = registerUnknownImageLoader;
+
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _imageCache = __webpack_require__(33);
+
+var _events = __webpack_require__(11);
+
+var _events2 = _interopRequireDefault(_events);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var imageLoaders = {}; /**
+                        * This module deals with ImageLoaders, loading images and caching images
+                        */
+>>>>>>> master:dist/cornerstone.js
 
 var int16Shader = {};
 
@@ -5935,7 +7639,32 @@ var int16Shader = {};
  * @param {Image} image A Cornerstone Image Object
  * @returns {Uint8Array} The image data for use by the WebGL shader
  */
+<<<<<<< HEAD:dist/cornerstone-core.js
 function storedPixelDataToImageData(image) {
+=======
+function loadImageFromImageLoader(imageId, options) {
+  var colonIndex = imageId.indexOf(':');
+  var scheme = imageId.substring(0, colonIndex);
+  var loader = imageLoaders[scheme];
+  var imagePromise = void 0;
+
+  if (loader === undefined || loader === null) {
+    if (unknownImageLoader !== undefined) {
+      imagePromise = unknownImageLoader(imageId);
+
+      return imagePromise;
+    }
+
+    throw new Error('loadImageFromImageLoader: no image loader for imageId');
+  }
+
+  imagePromise = loader(imageId, options);
+
+  // Broadcast an image loaded event once the image is loaded
+  imagePromise.then(function (image) {
+    (0, _jquery2.default)(_events2.default).trigger('CornerstoneImageLoaded', { image: image });
+  });
+>>>>>>> master:dist/cornerstone.js
 
   // Transfer image data to alpha and luminance channels of WebGL texture
   // Credit to @jpambrun and @fernandojsg
@@ -5994,6 +7723,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var int8Shader = {};
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 /**
  * Convert stored pixel data to image data.
  *
@@ -6009,6 +7739,31 @@ function storedPixelDataToImageData(image) {
         var numberOfChannels = 2;
         var data = new Uint8Array(image.width * image.height * numberOfChannels);
         var offset = 0;
+=======
+exports.default = function (element) {
+  var enabledElement = (0, _enabledElements.getEnabledElement)(element);
+
+  enabledElement.invalid = true;
+  enabledElement.needsRedraw = true;
+  var eventData = {
+    element: element
+  };
+
+  (0, _jquery2.default)(element).trigger('CornerstoneInvalidated', eventData);
+};
+
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _enabledElements = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+>>>>>>> master:dist/cornerstone.js
 
         for (var i = 0; i < pixelData.length; i++) {
                 data[offset++] = parseInt(pixelData[i], 10);
@@ -6035,8 +7790,12 @@ int8Shader.frag = 'precision mediump float;' + 'uniform sampler2D u_image;' + 'u
 // Clamp intensity
 'intensity = clamp(intensity, 0.0, 1.0);' +
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 // RGBA output
 'gl_FragColor = vec4(intensity, intensity, intensity, 1.0);' +
+=======
+var _drawImage = __webpack_require__(3);
+>>>>>>> master:dist/cornerstone.js
 
 // Apply any inversion necessary
 'if (invert == 1)' + 'gl_FragColor.rgb = 1.0 - gl_FragColor.rgb;' + '}';
@@ -6106,8 +7865,12 @@ rgbShader.frag = 'precision mediump float;' + 'uniform sampler2D u_image;' + 'un
 // Rescale based on slope and intercept
 'color = color * 256.0 * slope + intercept;' +
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 // Apply window settings
 'float center0 = wc - 0.5 - minPixelValue;' + 'float width0 = max(ww, 1.0);' + 'color = (color - center0) / width0 + 0.5;' +
+=======
+var _getTransform = __webpack_require__(9);
+>>>>>>> master:dist/cornerstone.js
 
 // RGBA output
 'gl_FragColor = vec4(color, 1);' +
@@ -6129,7 +7892,22 @@ Object.defineProperty(exports, "__esModule", {
 });
 /* eslint no-bitwise: 0 */
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 var uint16Shader = {};
+=======
+exports.default = function (element, pt) {
+  var enabledElement = (0, _enabledElements.getEnabledElement)(element);
+  var transform = (0, _getTransform2.default)(enabledElement);
+
+  return transform.transformPoint(pt.x, pt.y);
+};
+
+var _enabledElements = __webpack_require__(0);
+
+var _getTransform = __webpack_require__(9);
+
+var _getTransform2 = _interopRequireDefault(_getTransform);
+>>>>>>> master:dist/cornerstone.js
 
 /**
  * Convert stored pixel data to image data.
@@ -6168,14 +7946,22 @@ uint16Shader.frag = 'precision mediump float;' + 'uniform sampler2D u_image;' + 
 // Get texture
 'vec4 color = texture2D(u_image, v_texCoord);' +
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 // Calculate luminance from packed texture
 'float intensity = color.r*256.0 + color.a*65536.0;' +
+=======
+var _getDefaultViewport = __webpack_require__(4);
+>>>>>>> master:dist/cornerstone.js
 
 // Rescale based on slope and window settings
 'intensity = intensity * slope + intercept;' + 'float center0 = wc - 0.5;' + 'float width0 = max(ww, 1.0);' + 'intensity = (intensity - center0) / width0 + 0.5;' +
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 // Clamp intensity
 'intensity = clamp(intensity, 0.0, 1.0);' +
+=======
+var _updateImage = __webpack_require__(2);
+>>>>>>> master:dist/cornerstone.js
 
 // RGBA output
 'gl_FragColor = vec4(intensity, intensity, intensity, 1.0);' +
@@ -6225,8 +8011,12 @@ uint8Shader.frag = 'precision mediump float;' + 'uniform sampler2D u_image;' + '
 // Get texture
 'vec4 color = texture2D(u_image, v_texCoord);' +
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 // Calculate luminance from packed texture
 'float intensity = color.r*256.0;' +
+=======
+var _updateImage = __webpack_require__(2);
+>>>>>>> master:dist/cornerstone.js
 
 // Rescale based on slope and window settings
 'intensity = intensity * slope + intercept;' + 'float center0 = wc - 0.5;' + 'float width0 = max(ww, 1.0);' + 'intensity = (intensity - center0) / width0 + 0.5;' +
@@ -6254,6 +8044,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var vertexShader = exports.vertexShader = 'attribute vec2 a_position;' + 'attribute vec2 a_texCoord;' + 'uniform vec2 u_resolution;' + 'varying vec2 v_texCoord;' + 'void main() {' + 'vec2 zeroToOne = a_position / u_resolution;' + 'vec2 zeroToTwo = zeroToOne * 2.0;' + 'vec2 clipSpace = zeroToTwo - 1.0;' + 'gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);' + 'v_texCoord = a_texCoord;' + '}';
 
+<<<<<<< HEAD:dist/cornerstone-core.js
 /***/ }),
 /* 67 */
 /***/ (function(module, exports) {
@@ -6309,6 +8100,13 @@ if (!Array.prototype.find) {
     return undefined;
   };
 }
+=======
+var _renderColorImage = __webpack_require__(6);
+
+var _renderGrayscaleImage = __webpack_require__(12);
+
+var _renderWebImage = __webpack_require__(23);
+>>>>>>> master:dist/cornerstone.js
 
 
 /***/ })
