@@ -111,11 +111,10 @@ function restoreImage (image) {
  *
  * @param {Image} image A Cornerstone Image Object
  * @param {String|Object} colormap - it can be a colormap object or a colormap id (string)
- * @param {Object} tableRange - (Optional) { minPixelValue, maxPixelValue }
  *
  * @returns {Boolean} - Whether or not the image has been converted to a false color image
  */
-function convertImageToFalseColorImage (image, colormap, tableRange) {
+function convertImageToFalseColorImage (image, colormap) {
   if (image.color && !image.falseColor) {
     throw new Error('Color transforms are not implemented yet');
   }
@@ -137,17 +136,8 @@ function convertImageToFalseColorImage (image, colormap, tableRange) {
 
   // Convert the image to a false color image
   if (colormapId) {
-    let minPixelValue = image.minPixelValue || 0;
-
-    if (tableRange && tableRange.minPixelValue !== undefined) {
-      minPixelValue = tableRange.minPixelValue;
-    }
-
-    let maxPixelValue = image.maxPixelValue || 255;
-
-    if (tableRange && tableRange.maxPixelValue !== undefined) {
-      maxPixelValue = tableRange.maxPixelValue;
-    }
+    const minPixelValue = image.minPixelValue || 0;
+    const maxPixelValue = image.maxPixelValue || 255;
 
     image.restore = getRestoreImageMethod(image);
 
@@ -182,15 +172,14 @@ function convertImageToFalseColorImage (image, colormap, tableRange) {
  *
  * @param {HTMLElement} element The Cornerstone element
  * @param {*} colormap - it can be a colormap object or a colormap id (string)
- * @param {Object} tableRange - (Optional) { minPixelValue, maxPixelValue }
  *
  * @returns {void}
  */
-function convertToFalseColorImage (element, colormap, tableRange) {
+function convertToFalseColorImage (element, colormap) {
   const enabledElement = getEnabledElement(element);
 
 
-  return convertImageToFalseColorImage(enabledElement.image, colormap, tableRange);
+  return convertImageToFalseColorImage(enabledElement.image, colormap);
 }
 
 export { convertImageToFalseColorImage,
