@@ -62,7 +62,7 @@ export default function (element, fitViewportToWindow, baseLayerFilter) {
     element
   };
 
-  triggerEvent(element, 'CornerstoneElementResized', eventData);
+  triggerEvent(element, 'cornerstoneelementresized', eventData);
 
   if (enabledElement.image === undefined) {
     return;
