@@ -4,6 +4,7 @@
  * @param {HTMLElement} canvas A Canvas DOM element
  * @param {Image} image A Cornerstone Image Object
  * @returns {Viewport} viewport object
+ * @memberof Internal
  */
 let defaultViewportFunction = function (canvas, image) {
   if (canvas === undefined) {
