@@ -142,7 +142,7 @@ export function getImageLoadObject (imageId) {
   return cachedImage.imageLoadObject;
 }
 
-export function removeImageLoadObject (imageId) {
+export function removeImageLoadObject (imageId, unloadDataSet = true) {
   if (imageId === undefined) {
     throw new Error('removeImageLoadObject: imageId must not be undefined');
   }
@@ -161,7 +161,10 @@ export function removeImageLoadObject (imageId) {
   };
 
   triggerEvent(events, 'cornerstoneimagecachechanged', eventDetails);
-  decache(cachedImage.imageLoadObject);
+
+  if (unloadDataSet) {
+    decache(cachedImage.imageLoadObject);
+  }
 
   delete imageCacheDict[imageId];
 }
