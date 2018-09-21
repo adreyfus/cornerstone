@@ -1,4 +1,4 @@
-import { getLayers, getActiveLayer, getVisibleLayers } from '../layers.js';
+import { getActiveLayer, getVisibleLayers } from '../layers.js';
 import { addGrayscaleLayer } from '../rendering/renderGrayscaleImage.js';
 import { addColorLayer } from '../rendering/renderColorImage.js';
 import { addPseudoColorLayer } from '../rendering/renderPseudoColorImage.js';
@@ -107,10 +107,8 @@ function renderLayers (context, layers, invalidated) {
  */
 export default function (enabledElement, invalidated) {
   const element = enabledElement.element;
-  const allLayers = getLayers(element);
   const activeLayer = getActiveLayer(element);
   const visibleLayers = getVisibleLayers(element);
-  const resynced = !enabledElement.lastSyncViewportsState && enabledElement.syncViewports;
 
   // This state will help us to determine if the user has re-synced the
   // layers allowing us to make a new copy of the viewports
