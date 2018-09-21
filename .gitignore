@@ -4,3 +4,6 @@ npm-debug.log
 .idea
 coverage
 documentation
+.project
+.settings/
+dist/
