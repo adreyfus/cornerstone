@@ -57,6 +57,7 @@ export function rescaleImage (baseLayer, targetLayer) {
   const viewportRatio = targetLayer.viewport.scale / baseLayer.viewport.scale * colRelative;
 
   targetLayer.viewport.scale = baseLayer.viewport.scale * viewportRatio;
+  targetLayer.scaleFromBase = viewportRatio;
 }
 
 /**
