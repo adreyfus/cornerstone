@@ -5,13 +5,6 @@ import { addPseudoColorLayer } from '../rendering/renderPseudoColorImage.js';
 import { addLabelMapLayer } from '../rendering/renderLabelMapImage.js';
 import setToPixelCoordinateSystem from '../setToPixelCoordinateSystem.js';
 
-// This is used to keep each of the layers' viewports in sync with the active layer
-const originalViewportScale = {};
-
-function getViewportRatio (baseLayerId, targetLayerId) {
-  return originalViewportScale[targetLayerId] / originalViewportScale[baseLayerId];
-}
-
 // Sync all viewports based on active layer's viewport
 function syncViewports (layers, activeLayer) {
   // If we intend to keep the viewport's scale, translation and rotation in sync,
@@ -25,11 +18,7 @@ function syncViewports (layers, activeLayer) {
       return;
     }
 
-    if (!originalViewportScale[layer.layerId]) {
-      originalViewportScale[layer.layerId] = layer.viewport.scale;
-    }
-
-    const viewportRatio = getViewportRatio(activeLayer.layerId, layer.layerId);
+    const viewportRatio = layer.scaleFromBase;
 
     // Update the layer's translation and scale to keep them in sync with the first image
     // based on the ratios between the images
@@ -126,16 +115,6 @@ export default function (enabledElement, invalidated) {
   // This state will help us to determine if the user has re-synced the
   // layers allowing us to make a new copy of the viewports
   enabledElement.lastSyncViewportsState = enabledElement.syncViewports;
-
-  // Stores a copy of all viewports if the user has just synced them then we can use the
-  // copies to calculate anything later (ratio, translation offset, rotation offset, etc)
-  if (resynced) {
-    allLayers.forEach(function (layer) {
-      if (layer.viewport) {
-        originalViewportScale[layer.layerId] = layer.viewport.scale;
-      }
-    });
-  }
 
   // Sync all viewports in case it's activated
   if (enabledElement.syncViewports === true) {
